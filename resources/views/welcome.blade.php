@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>POM_API</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -82,18 +82,19 @@
 
         <div class="content">
             <div class="title m-b-md">
-                Le Monde de Laravel
+
             </div>
 
             <div class="links">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLxSW4BHDeG7q0dzs2-YcEhi6EF5vwaK4pwQ9o6AfbPnSEqDLk8Q" alt="Photo laravel rocket" />
+                
                 
                 <a href="https://laravel.com/docs">Documentation</a>
                 <a href="https://laracasts.com">Laracasts</a>
                 <a href="https://laravel-news.com">News</a>
                 <a href="https://forge.laravel.com">Forge</a>
                 <a href="https://github.com/laravel/laravel">GitHub</a>
-                <img src="https://www.tutorialspoint.com/laravel/images/laravel-mini-logo.jpg" alt="Photo de laravel 5.4" />
+                <a href="https://github.com/laravel/laravel">GitHub</a>
+                
                 
             </div>
 
