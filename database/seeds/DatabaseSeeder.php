@@ -17,5 +17,7 @@ class DatabaseSeeder extends Seeder
     		'password'=>bcrypt('pass'),
 
     		]);
+        
     }
+
 }
