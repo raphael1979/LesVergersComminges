@@ -17,13 +17,17 @@ class DeterminationController extends Controller
 	}
 	public function recherche(Request $request)
 	{
+		$apples = Apple::All();
+		
 		
 
+		return view('resultat', ['apples'=>$apples]);
+
 		
-		$results = Apple::where('id_couleur_epiderme_value', '$request->input("couleur_epiderme")')
-		->get();
-		
-		return view('resultat',['apples'=>$apple]);
+		// $results = Apple::where('id_couleur_epiderme_value', '$request->input("couleur_epiderme")')
+		// ->get();
+
+		// return view('resultat',['apples'=>$apple]);
 	}
 }
 
