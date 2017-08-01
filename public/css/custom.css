@@ -2,6 +2,8 @@ html, body{
 	background-color: #81c784;
 	color: black;
 	font-family: 'Open sans-serif', 'sans-serif';
+	/*position: relative;*/
+	min-height: 100%;
 	
 }
 h1{
@@ -11,8 +13,8 @@ h1{
 header{
 	width: 100vw;
 	background-color: white;
-	
-	
+
+
 }
 img{
 	width: 100vw;
@@ -52,15 +54,16 @@ a {
 	font-weight: 600;
 	letter-spacing: .1rem;
 	text-decoration: none;
-/*	text-transform: uppercase;
-*/}
+	/*text-transform: uppercase;*/
+}
 
 
 footer{
 	position: absolute;
 	bottom: 0;
 	width: 100vw;
-	height: 100px;
-	background-color: black;
-	color: white;
+	height: 10vh;
+	background-color: #000000;
+	color: #FFFFFF;
 }
+
