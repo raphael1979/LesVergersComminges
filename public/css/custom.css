@@ -9,13 +9,15 @@ h1{
 	font-weight: bold ;
 }
 header{
+	width: 100vw;
 	background-color: white;
+	
 	
 }
 img{
 	width: 100vw;
-	padding-left: 2vh;
-	padding-right: 20vh;
+	/*padding-left: 2vh;
+	padding-right: 20vh;*/
 }
 
 .flex-center {
@@ -44,15 +46,21 @@ img{
 }
 
 a {
-	color: #636b6f;
+	color: white;
 	padding: 0 25px;
 	font-size: 12px;
 	font-weight: 600;
 	letter-spacing: .1rem;
 	text-decoration: none;
-	text-transform: uppercase;
-}
+/*	text-transform: uppercase;
+*/}
 
-/*.m-b-md {
-	margin-bottom: 30px;
-}*/
+
+footer{
+	position: absolute;
+	bottom: 0;
+	width: 100vw;
+	height: 100px;
+	background-color: black;
+	color: white;
+}

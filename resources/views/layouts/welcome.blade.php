@@ -35,7 +35,7 @@
         @endif
     </div>
     @endif
-    
+
     <div class="content">
         <div class="title m-b-md">
         </div>
@@ -43,14 +43,41 @@
         
     </div>
 </div>
-<footer class="col-sm-12">
-    <div>
-        <p>2017 © Tous droits réservés.</p>
-        <a href="https://www.les-vergers-retrouves-du-comminges.org/contact/">Contact</a>
-        <a href="https://www.les-vergers-retrouves-du-comminges.org/mentions-legales/">Mentions légales du site</a>
-        <a href="https://www.les-vergers-retrouves-du-comminges.org/plan-du-site/ ">Plan</a>
-        <p>Les Vergers retrouvés du COMMINGES.</p>
+{{-- <footer class="navbar-fixed-bottom">
+    <div class="col-md-12">
+
+        <div class="row">
+            <div class="col-sm-4">
+                <p>2017 © Tous droits réservés.</p>
+            </div>
+            <div class="col-sm-4">
+                <a href="https://www.les-vergers-retrouves-du-comminges.org/contact/">Contact</a>
+                <a href="https://www.les-vergers-retrouves-du-comminges.org/mentions-legales/">Mentions légales du site</a>
+                <a href="https://www.les-vergers-retrouves-du-comminges.org/plan-du-site/ ">Plan</a>
+            </div>
+            <div class="col-sm-4">
+                <p>Les Vergers retrouvés du COMMINGES.</p>
+            </div>
+        </div>
     </div>
-</footer>
+
+</footer> --}}
+<footer >
+    <div class="container-fluid navbar-fixed-bottom" >
+        <div class=""></div>
+        <div class="row justify-content-start">
+            <div class="col-4">2017 © Tous droits réservés.</div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-4"><a href="https://www.les-vergers-retrouves-du-comminges.org/contact/">Contact</a>
+                <a href="https://www.les-vergers-retrouves-du-comminges.org/mentions-legales/">Mentions légales du site</a>
+                <a href="https://www.les-vergers-retrouves-du-comminges.org/plan-du-site/ ">Plan</a></div>
+            </div>
+            <div class="row justify-content-end">
+                <div class="col-4">Les Vergers retrouvés du COMMINGES.</div>
+            </div>
+        </div>
+
+    </footer>
 </body>
 </html>
