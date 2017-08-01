@@ -21,3 +21,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/determination', 'DeterminationController@index')->name('determination');
+
+Route::post('/recherche', 'DeterminationController@recherche')->name('recherche');
+Route::get('/modification', 'AppleController@index')->name('modification');
+Route::get('/list', 'ListController@getApples')->name('listApples');
