@@ -20,10 +20,10 @@
     <header>
         <div class="containerBannier">
             <div class="col-sm-12" >
-               <img class="navbar-left" src="{{ asset('/images/cropped-BannierSite-2.png') }}" alt="coucou">
-           </div>
-       </div>
-   </header>   
+             <img class="navbar-left" src="{{ asset('/images/cropped-BannierSite-2.png') }}" alt="coucou">
+         </div>
+     </div>
+ </header>   
 </div>
 <div class="flex-center position-ref full-height">
     @if (Route::has('login'))
@@ -32,8 +32,10 @@
         <a href="{{ url('/home') }}">Home</a>
         @else
         <a href="{{ url('/login') }}">Login</a>
+        @endif
     </div>
     @endif
+    
     <div class="content">
         <div class="title m-b-md">
         </div>
