@@ -6,8 +6,8 @@ html, body{
 	
 }
 h1{
+	font-size: 50px;
 	font-family: 'Rajdhani', 'sans-serif';
-	/*font-weight: bold ;*/
 }
 header{
 
@@ -23,59 +23,61 @@ img{
 	max-width: 85%;	
 }
 
-/*.flex-center {
-	align-items: center;
+
+.descriptif {
+	text-align: justify-all;
+	padding: 10px;
+}
+
+a {
+	color: white;
+	letter-spacing: .1rem;
+	text-decoration: none;
+}
+
+
+#footer{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 20px;
+	background-color: #000000;
+	color: #FFFFFF;
+	text-align: center;
+	display:flex;
+	justify-content: space-around;
+	font-family: "Open Sans", sans-serif;
+	font-size: 14px;
+	letter-spacing: .1rem;
+	text-decoration: none;
+
+}
+
+.login{
+	color:
+	padding:  25px;
+	margin: 25px;
+	font-size: 12px;
+	letter-spacing: .1rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: right;
+}
+.btn_up {
+	display: none;
+	position:fixed;
+	z-index:5;
+	bottom:10px;
+	right: 10px;
+	z-index: 5;
+}
+.onglets{
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
+	color: white;
+	font-size: 20px;
+	font-family: 'Open sans-serif', 'sans-serif';
+
+
 }
-
-.position-ref {
-	position: absolute;
-}
-
-.bottom-right {
-	position: absolute;
-	right: 20px;
-	bottom: 0px;
-	}*/
-
-	.descritif {
-		text-align: justify;
-	}
-
-/*.title {
-	font-size: 84px;
-	font-size: 150px;
-	}*/
-
-	a {
-		color: white;
-		/*padding:  25px;
-		margin: 25px;
-		font-size: 12px;*/
-		/*font-weight: 600;*/
-		letter-spacing: .1rem;
-		text-decoration: none;
-		/*text-transform: uppercase;*/
-	}
-
-
-	#footer{
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		padding: 20px;
-		background-color: #000000;
-		color: #FFFFFF;
-		text-align: center;
-		display:flex;
-		justify-content: space-around;
-		font-family: "Open Sans", sans-serif;
-		font-size: 14px;
-		
-		
-		letter-spacing: .1rem;
-		
-	}
-

@@ -1,19 +1,18 @@
 @extends('layouts.welcome')
 
 @section('content')
-{{-- <div class="container">
-  <div class="row"> 
-    <div class="col-md-6">
-     <a href="">Identifier une pomme</a> 
-   </div>
-   <div class="col-md-6">
-     <a href="">Nos variétés</a>
-   </div>
- </div>
+{{-- <div class="row">
+  <div> Identifier une pomme</div> 
+  <div>Nos variétés</div>
 </div> --}}
+<div class="onglets">
+  <p><a href="">Identifier une pomme</a></p>
+  <p><a href="">Nos variétés</a></p>
+</div>
+
 <div class="descriptif">  
-  <h1>Les pommes</h1>
-  <p>Vous vous apprêtez à lancer une recherche pour identifier une variété de pomme.<br> 
+  <h1>Les Pommes</h1>
+  <p >Vous vous apprêtez à lancer une recherche pour identifier une variété de pomme.<br> 
 
     Quelques informations s'imposent :<br>
 

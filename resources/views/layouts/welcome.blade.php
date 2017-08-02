@@ -23,9 +23,9 @@
         </div>
     </header>   
 </div>
-<div class="flex-center position-ref full-height">
+<div class="login">
     @if (Route::has('login'))
-    <div class="bottom-right links">
+    <div class="">
         @if (Auth::check())
         <a href="{{ url('/home') }}">Home</a>
         @else
@@ -34,12 +34,12 @@
     </div>
     @endif
 
-
-
-    @yield('content')
-
-
 </div>
+
+
+@yield('content')
+
+
 <footer id="footer" >
     <div class="col-4">2017 © Tous droits réservés.</div>
     <div class="col-4"> 
@@ -49,49 +49,13 @@
     </div>
     <div class="col-4">Les Vergers retrouvés du COMMINGES.</div>
 </footer>
-
-
-
-
-{{-- <div class="footer navbar-fixed-bottom">
-    <div class="container">
-        <div >
-            <div class="col-md-4">
-                <p>2017 © Tous droits réservés.</p>
-
-            </div>  <div class="col-md-4">
-            <p>2017 © Tous droits réservés.</p>
-
-        </div>  <div class="col-md-4">
-        <p>2017 © Tous droits réservés.</p>
-
-    </div> 
-
-</div>
-        <div class="row">
-            <div class="col-md-4">
-                <a href="https://www.les-vergers-retrouves-du-comminges.org/contact/">Contact</a>
-            </div>
-            <div class="col-md-4">
-                <a href="https://www.les-vergers-retrouves-du-comminges.org/mentions-legales/">Mentions légales du site</a>
-            </div>
-            <div class="col-md-4">
-                <a href="https://www.les-vergers-retrouves-du-comminges.org/plan-du-site/ ">Plan</a>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-4">
-                <p>Les Vergers retrouvés du COMMINGES.</p>
-            </div>
-        </div>
-    </div>
-
-</div> --}}
+{{-- 
+<button class="btn_up">
+    <span  class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+</button> --}}
 </body>
 </html>
 
 {{-- essai srcolltop --}}
 {{-- <a class="scrolltop" href="#"><span class="fa fa-angle-up"></span></a> --}}
-</body>
-</html>
+
