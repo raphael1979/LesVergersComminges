@@ -3,13 +3,17 @@
 @section('content')
 <h1>Créez une nouvelle variété</h1>
 {!! Form::open([
-	'route' => ['addApple']	
+	'route' => ['createApple']	
 	]) !!}
 
 	<h3>Nom et synomymes</h3>
 	<div class="form-group">
 		{!! Form::label('nom') !!}
 		{!! Form::text('nom') !!}
+	</div>
+	<div class="form-group">
+		{!! Form::label('synonyme') !!}
+		{!! Form::text('synomyme') !!}
 	</div>
 	
 	<h3>Couleur de l'épiderme</h3>
@@ -58,6 +62,10 @@
 
 	{!! Form::label('cuvette_oeil_prof', "Cuvette de l'oeil profonde : ") !!}
 	{!! Form::select('cuvette_oeil_prof',['','oui', 'non']) !!}
+	<br/>
+	{!! Form::label('signe_particulier', "Signe particulier: ") !!}
+	{!! Form::textarea('signe_particulier_value',null,['class'=>'form-control', 'rows' => 2, 'cols' => 40]) !!}
+	
 
 	<br/>
 	{!! Form::submit('Créez une nouvelle variété !') !!}

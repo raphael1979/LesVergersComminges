@@ -14,11 +14,15 @@
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// determiner une variete
 Route::get('/determination', 'DeterminationController@index')->name('determination');
 Route::post('/recherche', 'DeterminationController@recherche')->name('recherche');
 Route::post('/resultat', 'DeterminationController@recherche')->name('resultat');
+
+//creer modifier et supprimer une variete afficher les infos
 Route::get('/creation', 'ModificationController@index')->name('creation');
-Route::post('/creation', 'ModificationController@addApple')->name('addApple');
+Route::post('/creation', 'ModificationController@creation')->name('createApple');
+Route::get('/edition/{id}, ModificationController@show')->name('edition');
 Route::get('/list', 'ListController@getApples')->name('listApples');
-Route::get('/description', 'DescriptionController@index')->name('description');
-//Route::get('/list', 'ModificationController@addApple')->name('retour');
+Route::get('/description/{id}', 'DescriptionController@index')->name('description');

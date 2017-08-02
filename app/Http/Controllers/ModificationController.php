@@ -18,8 +18,8 @@ class ModificationController extends Controller
 
 	}
 	
-// ajouter les nouveaux enregistrements dans la BDD
-	public function addApple(Request $request)
+// creer les nouveaux enregistrements dans la BDD
+	public function creation(Request $request)
 	{
 
 
@@ -40,13 +40,20 @@ class ModificationController extends Controller
 		$apple->id_cavite_pedonculaire_prof_value = $request->input('cavite_pedonculaire_prof');
 		$apple->id_cuvette_oeil_prof_value = $request->input('cuvette_oeil_prof');
 		$apple->id_cuvette_oeil_value = $request->input('cuvette_oeil_larg');
+		$apple->signe_particulier_value= $request->input('signe_particulier');
 		
 		$apple->save();
-		Session::flash('flash_message', 'Le formateur a été ajouté avec succès!');
+		Session::flash('flash_message', 'La variété a été ajoutée avec succès!');
 
 		return redirect()->route('listApples');
 
 	}
-}
+	public function show($id)
+	{
+		$apple = App\Apple::findOrFail($id);
 
+		return view('edition', compact('apple'));
+	}
+
+}
 
