@@ -30,6 +30,7 @@ class CreateApplesTable extends Migration
             $table->integer('id_cuvette_oeil_value')->nullable();
             $table->integer('id_cuvette_oeil_prof_value')->nullable();
             $table->string('signe_particulier_value')->nullable();
+            
             $table->timestamps();
         });
     }
