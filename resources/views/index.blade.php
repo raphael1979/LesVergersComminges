@@ -1,13 +1,23 @@
 @extends('layouts.welcome')
-
 @section('content')
-{{-- <div class="row">
-  <div> Identifier une pomme</div> 
-  <div>Nos variétés</div>
-</div> --}}
-<div class="onglets">
-  <p><a href="">Identifier une pomme</a></p>
-  <p><a href="">Nos variétés</a></p>
+
+<div class="section">
+  <div class="row">
+    <div class="col-md-6 col-xs-6"><a href="#">Identifier une pomme</a></div>
+    <div class="col-md-6 col-xs-6"><a href="#">Nos variétés</a></div>
+
+    <div class="login">
+      @if (Route::has('login'))
+      <div class="">
+        @if (Auth::check())
+        <a href="{{ url('/home') }}">Home</a>
+        @else
+        <a href="{{ url('/login') }}">Admin</a>
+        @endif
+      </div>
+      @endif
+    </div>
+  </div>
 </div>
 
 <div class="descriptif">  

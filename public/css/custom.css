@@ -2,31 +2,32 @@ html, body{
 	background-color: #81c784;
 	color: black;
 	font-family: 'Open sans-serif', 'sans-serif';
-	margin: 0;
 	
 }
 h1{
 	font-size: 50px;
 	font-family: 'Rajdhani', 'sans-serif';
+	text-align: center;
 }
 header{
-
 	width: 100%;
 	background-color: white;
 	margin-top: 0px;
 	padding-top: 25px;
-	padding-bottom: 10px;
+	padding-bottom: 20px;
 }
-img{
-	margin-right: 5px;
-	margin-left: 85px;
-	max-width: 85%;	
+img{	
+	height: 80px;
 }
 
 
 .descriptif {
-	text-align: justify-all;
+	text-align: justify;
 	padding: 10px;
+	padding-bottom: 30px;
+	font-size: 15px;
+	margin: 10px;
+	font-family: 'Open sans-serif', 'sans-serif';
 }
 
 a {
@@ -34,28 +35,7 @@ a {
 	letter-spacing: .1rem;
 	text-decoration: none;
 }
-
-
-#footer{
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	padding: 20px;
-	background-color: #000000;
-	color: #FFFFFF;
-	text-align: center;
-	display:flex;
-	justify-content: space-around;
-	font-family: "Open Sans", sans-serif;
-	font-size: 14px;
-	letter-spacing: .1rem;
-	text-decoration: none;
-
-}
-
 .login{
-	color:
 	padding:  25px;
 	margin: 25px;
 	font-size: 12px;
@@ -64,20 +44,31 @@ a {
 	text-transform: uppercase;
 	text-align: right;
 }
-.btn_up {
-	display: none;
-	position:fixed;
-	z-index:5;
-	bottom:10px;
-	right: 10px;
-	z-index: 5;
-}
 .onglets{
 	display: flex;
 	justify-content: space-around;
 	color: white;
 	font-size: 20px;
 	font-family: 'Open sans-serif', 'sans-serif';
-
+}
+footer{
+	position: absolute;
+	padding: 10px;
+	background-color: #000000;
+	text-align: center;
+	color: white;
+	position: fixed;
+	height: 45px;
+	bottom: 0;
+	width: 100%;
+	text-decoration: none;
+	font-size: 14px;
+	font-family: "Open Sans", sans-serif;
+}
+.section{
+	text-align: center;
+	padding: 20px;
+	font-family: 'Open sans-serif', 'sans-serif';
+	font-size: 30px;
 
 }
