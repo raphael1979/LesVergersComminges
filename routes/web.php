@@ -11,9 +11,16 @@
 |
 */
 
-Auth::routes();
+// Route::get('/', function () {
+// 	return view('index');
+// });
 
+Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/accueil', 'AccueilController@show');
+
+// Route::get('/index', 'EvenementController@index')->name('evenement');
+// Route::get('/accueil', 'HomeController@show')->name('index');
 
 // determiner une variete
 Route::get('/determination', 'DeterminationController@index')->name('determination');

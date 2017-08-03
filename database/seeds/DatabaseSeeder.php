@@ -27,8 +27,6 @@ class DatabaseSeeder extends Seeder
         $this->call(PedonculeTableSeeder::class);
         $this->call(SigneParticulierTableSeeder::class);
         $this->call(StrieTableSeeder::class);
-
-
     }
 
 }

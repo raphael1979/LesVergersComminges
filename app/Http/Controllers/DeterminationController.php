@@ -19,12 +19,15 @@ class DeterminationController extends Controller
 	public function recherche(Request $request)
 	{
 		$resultats = [];
-		$apples=Apple::All();
+
+		$apples = Apple::All();
 		foreach ($apples as $apple) {
-			$resultats->push($apple);
+			array_push($resultats, $apple);
 
 		}
-		return $resultats;
+		// return $resultats;
+		
+		return view('resultat', compact('apples'));
 		
 		// $collection = collect([
 		// 	Apple::All();
@@ -45,7 +48,6 @@ class DeterminationController extends Controller
 	// 		}
 	// 	}
 
-	// 	return view('machin', compact('apples'))
 	// }
 
 	}
