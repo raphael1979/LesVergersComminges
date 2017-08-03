@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class strie extends Model
+class CavitePedonculaireLarg extends Model
 {
     //
 }

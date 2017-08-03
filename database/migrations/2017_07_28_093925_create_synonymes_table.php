@@ -27,6 +27,6 @@ class CreateSynonymesTable extends Migration
      */
                 public function down()
                 {
-                   Schema::dropIfExists('synonymes');
-               }
-           }
+                 Schema::dropIfExists('synonymes');
+             }
+         }

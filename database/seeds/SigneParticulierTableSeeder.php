@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class cavite_pedonculaire_profTableSeeder extends Seeder
+class SigneParticulierTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,9 @@ class cavite_pedonculaire_profTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+    	DB::table('signe_particulier')->insert([
+    		'value' => '',
+    		
+    		]);
     }
 }

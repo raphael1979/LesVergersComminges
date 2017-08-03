@@ -2,28 +2,28 @@
 
 use Illuminate\Database\Seeder;
 
-class calibreTableSeeder extends Seeder
+class PedonculeTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      *
      * @return void
      */
-    
-    
     public function run()
+
     {
-    	DB::table('calibre')->insert([
-    		'value' => 'petit',
+    	DB::table('pedoncule')->insert([
+    		'value' => 'tres court',
     		
     		]);
-    	DB::table('calibre')->insert([
+    	DB::table('pedoncule')->insert([
     		'value' => 'moyen',
     		
     		]);
-    	DB::table('calibre')->insert([
-    		'value' => 'gros',
+    	DB::table('pedoncule')->insert([
+    		'value' => 'long',
     		
     		]);
     }
 }
+

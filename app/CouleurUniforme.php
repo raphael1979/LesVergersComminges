@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class forme extends Model
+class CouleurUniforme extends Model
 {
     //
 }
