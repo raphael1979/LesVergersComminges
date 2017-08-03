@@ -39,7 +39,8 @@
             </div>
         </div>
     </footer>
-    {{-- essai srcolltop --}}
+    <section>
+        {{-- essai srcolltop --}}
 {{-- <a class="scrolltop" href="#"><span class="fa fa-angle-up"></span></a>
 
 <button class="btn_up">

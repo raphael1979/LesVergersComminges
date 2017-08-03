@@ -31,15 +31,16 @@ img{
 }
 
 a {
-	color: white;
-	letter-spacing: .1rem;
 	text-decoration: none;
+	color: #ffffff;
+	letter-spacing: .1rem;
 }
 .login{
 	padding:  25px;
 	margin: 25px;
 	font-size: 12px;
 	letter-spacing: .1rem;
+	color: #ffffff;
 	text-decoration: none;
 	text-transform: uppercase;
 	text-align: right;
@@ -56,7 +57,7 @@ footer{
 	padding: 10px;
 	background-color: #000000;
 	text-align: center;
-	color: white;
+	color: #ffffff;
 	position: fixed;
 	height: 45px;
 	bottom: 0;
@@ -65,3 +66,13 @@ footer{
 	font-size: 14px;
 	font-family: "Open Sans", sans-serif;
 }
+/*Debut Bouton "Retour en haut de page*/
+/*.btn_up {
+	display: none;
+	position:fixed;
+	z-index:5;
+	bottom:10px;
+	right: 10px;
+	z-index: 5;
+	}*/
+/*Fin Bouton "Retour en haut de page"*/
