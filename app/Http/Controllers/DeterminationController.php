@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Apple;
@@ -17,22 +18,23 @@ class DeterminationController extends Controller
 	}
 	public function recherche(Request $request)
 	{
-		
-		$collection = collect([
-			Apple::All();
-			]);
-
-		$plucked = $collection->pluck('name');
-
-		$plucked->all();
-
-// ['Desk', 'Chair']
 		$resultats = [];
+		$apples=Apple::All();
 		foreach ($apples as $apple) {
 			$resultats->push($apple);
-			$resultats[]=$apple;
-			return $resultats;
+
 		}
+		return $resultats;
+		
+		// $collection = collect([
+		// 	Apple::All();
+		// 	]);
+
+		// $plucked = $collection->pluck('name');
+
+		// $plucked->all();
+
+// ['Desk', 'Chair']
 
 
 
