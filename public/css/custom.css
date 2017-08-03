@@ -1,8 +1,7 @@
 html, body{
 	background-color: #81c784;
 	color: black;
-	font-family: 'Open sans-serif', 'sans-serif';
-	
+	font-family: 'Open sans-serif', 'sans-serif';	
 }
 h1{
 	font-size: 50px;
@@ -12,6 +11,7 @@ h1{
 h3{
 	font-family: 'Rajdhani', 'sans-serif';
 	font-size: 25px;
+	padding: 10px;
 }
 header{
 	width: 100%;
@@ -27,7 +27,6 @@ img{
 
 .descriptif {
 	text-align: justify;
-	padding: 10px;
 	padding-bottom: 30px;
 	font-size: 15px;
 	margin: 10px;

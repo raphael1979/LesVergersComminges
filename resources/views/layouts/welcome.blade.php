@@ -18,7 +18,7 @@
     <header class="navbar">
         <div class="container">
             <div class="col-md-12 col-xs-12">
-                <img src="{{ asset('/images/cropped-BannierSite-2.png') }}" alt="coucou">
+                <img src="{{ asset('/images/cropped-BannierSite-2.png') }}"  class="img-responsive" alt="coucou">
             </div>
         </div>
     </header>
