@@ -44,12 +44,12 @@ a {
 	text-transform: uppercase;
 	text-align: right;
 }
-.onglets{
-	display: flex;
-	justify-content: space-around;
-	color: white;
-	font-size: 20px;
+.section{
+	text-align: center;
+	padding: 20px;
 	font-family: 'Open sans-serif', 'sans-serif';
+	font-size: 30px;
+
 }
 footer{
 	position: absolute;
@@ -64,11 +64,4 @@ footer{
 	text-decoration: none;
 	font-size: 14px;
 	font-family: "Open Sans", sans-serif;
-}
-.section{
-	text-align: center;
-	padding: 20px;
-	font-family: 'Open sans-serif', 'sans-serif';
-	font-size: 30px;
-
 }

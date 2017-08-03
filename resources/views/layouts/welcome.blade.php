@@ -15,26 +15,15 @@
 
 </head>
 <body>
-    <header class="navbar-fixed-top">
+    <header class="navbar">
         <div class="container">
             <div class="col-md-12 col-xs-12">
                 <img src="{{ asset('/images/cropped-BannierSite-2.png') }}" alt="coucou">
             </div>
         </div>
     </header>
-    <div class="login">
-        @if (Route::has('login'))
-        <div class="">
-            @if (Auth::check())
-            <a href="{{ url('/home') }}">Home</a>
-            @else
-            <a href="{{ url('/login') }}">Login</a>
-            <button type="button" class="btn btn-info">Info</button>
-            @endif
-        </div>
-        @endif
-    </div>
-    
+
+
     @yield('content')
 
     <footer class="navbar-fixed-bottom">
