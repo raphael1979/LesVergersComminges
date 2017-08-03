@@ -25,4 +25,4 @@ Route::get('/creation', 'ModificationController@index')->name('creation');
 Route::post('/creation', 'ModificationController@creation')->name('createApple');
 Route::get('/edition/{id}, ModificationController@show')->name('edition');
 Route::get('/list', 'ListController@getApples')->name('listApples');
-Route::get('/description/{id}', 'DescriptionController@index')->name('description');
+//Route::get('/description/{id}', 'DescriptionController@index')->name('description');

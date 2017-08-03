@@ -17,20 +17,37 @@ class DeterminationController extends Controller
 	}
 	public function recherche(Request $request)
 	{
-		$apples = Apple::All();
 		
-		
+		$collection = collect([
+			Apple::All();
+			]);
 
-		return view('resultat', ['apples'=>$apples]);
+		$plucked = $collection->pluck('name');
 
-		
-		// $results = Apple::where('id_couleur_epiderme_value', '$request->input("couleur_epiderme")')
-		// ->get();
+		$plucked->all();
 
-		// return view('resultat',['apples'=>$apple]);
+// ['Desk', 'Chair']
+		$resultats = [];
+		foreach ($apples as $apple) {
+			$resultats->push($apple);
+			$resultats[]=$apple;
+			return $resultats;
+		}
+
+
+
+
+	// 		if (Apple::All()->where('id_couleur_epiderme_value', '=', '$request->input("couleur_epiderme")')){
+	// 			$resultats[]=$apple;
+	// 			return $resultats;
+	// 		}
+	// 	}
+
+	// 	return view('machin', compact('apples'))
+	// }
+
 	}
 }
-
 
 
 
