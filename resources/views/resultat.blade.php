@@ -15,21 +15,23 @@
 
           <table class="table table-striped">
             <thead>
-              <h4>Toutes nos variétés</h4>
+              <h4>Votre selection</h4>
               <tr>
 
-                <th>Nom</th>
+                <th>Nom </th>
                 
               </tr>
             </thead>
             <tbody>
               @foreach ($apples as $apple)
+              
               <tr>
                 {{-- <td style="text-align:center;">
                   <a href="{{ route('appleShow', $apple->id) }}"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
                   <a href="{{ route('appleEdit', $apple->id) }}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                   <a href="{{ route('appleDelete', $apple->id) }}"><i class="fa fa fa-ban" aria-hidden="true"></i></a></td> --}}
                   <td>{{$apple->nom}}</td>
+                  
                   
                 </tr>
                 @endforeach

@@ -8,13 +8,8 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class DataBaseTest extends BrowserKitTestCase
+
 {
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
-    
     use DatabaseTransactions;
 
     /**
@@ -24,9 +19,10 @@ class DataBaseTest extends BrowserKitTestCase
      */
     public function testBasicExample()
     {
-    	$response = $this->get('/');
+        $response = $this->get('/');
 
         // ...
     }
 }
+
 
