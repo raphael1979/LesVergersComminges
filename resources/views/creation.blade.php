@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.welcome')
 
 @section('content')
 <h1>Créez une nouvelle variété</h1>
@@ -64,7 +64,7 @@
 	{!! Form::select('cuvette_oeil_prof',['','oui', 'non']) !!}
 	<br/>
 	{!! Form::label('signe_particulier', "Signe particulier: ") !!}
-	{!! Form::textarea('signe_particulier_value',null,) !!}
+	{!! Form::textarea('signe_particulier_value',null) !!}
 	
 
 	<br/>
