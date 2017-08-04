@@ -64,7 +64,7 @@
 	{!! Form::select('cuvette_oeil_prof',['','oui', 'non']) !!}
 	<br/>
 	{!! Form::label('signe_particulier', "Signe particulier: ") !!}
-	{!! Form::textarea('signe_particulier_value',null,['class'=>'form-control', 'rows' => 2, 'cols' => 40]) !!}
+	{!! Form::textarea('signe_particulier_value',null,) !!}
 	
 
 	<br/>

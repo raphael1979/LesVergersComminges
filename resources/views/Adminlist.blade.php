@@ -26,7 +26,7 @@
               @foreach ($apples as $apple)
               <tr>
                 <td style="text-align:center;">
-                 
+
                  <a href="{{ route('appleEdit', $apple->id) }}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                  <a href="{{ route('appleDelete', $apple->id) }}"><i class="fa fa fa-ban" aria-hidden="true"></i></a></td>
                  <td>{{$apple->nom}}</td>

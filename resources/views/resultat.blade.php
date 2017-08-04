@@ -24,6 +24,7 @@
             </thead>
             <tbody>
               @foreach ($apples as $apple)
+              
               <tr>
                 {{-- <td style="text-align:center;">
                   <a href="{{ route('appleShow', $apple->id) }}"><i class="fa fa-info-circle" aria-hidden="true"></i></a>

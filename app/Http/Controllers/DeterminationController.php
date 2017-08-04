@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Database\Eloquent\Collection;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Apple;
@@ -23,12 +23,19 @@ class DeterminationController extends Controller
 		$apples = Apple::All();
 		foreach ($apples as $apple) {
 			array_push($resultats, $apple);
+		}
+		return $resultats;
+		foreach ($apples as $apple) {
+			# code...
+		}
+		if('id_couleur_epiderme_value', '=', '$request->input("couleur_epiderme")')
+		{
 
 		}
-		// return $resultats;
-		
-		return view('resultat', compact('apples'));
-		
+
+
+		//return view('resultat', compact('apples'));
+
 		// $collection = collect([
 		// 	Apple::All();
 		// 	]);
@@ -51,7 +58,7 @@ class DeterminationController extends Controller
 	// }
 
 	}
-}
+
 
 
 
