@@ -53,7 +53,7 @@ class listController extends Controller
     */
     public function show($id)
     {
-        //
+        return view('description');
     }
 
     /**

@@ -11,7 +11,7 @@
 	<hr>
 	<h3>Couleur de l'épiderme</h3>
 	{!! Form::label('couleur_epiderme', "Couleur du fond : ") !!}
-	{!! Form::select('couleur_epiderme',['','rouge', 'jaune', 'vert','marron']) !!}
+	{!! Form::select('couleur_epiderme',['','rouge', 'jaune', 'vert','brun']) !!}
 	{!! Form::label('couleur_uniforme', "Couleur uniforme : ") !!}
 	{!! Form::select('couleur_uniforme',['','oui', 'non']) !!}
 	<br/>

@@ -14,13 +14,13 @@ class RouteTest extends BrowserKitTestCase
      *
      * @return void
      */
-    public function testExample()
+    public function testroute()
     {
-    	$this->visit('/')
-    	->see('Laravel');
+    	$this->visit('/determination')
+    	->see('determination');
 
 
-    	$this->visit('/home')
-    	->see('Laravel');
+    	$this->visit('/creation')
+    	->see('creation');
     }
 }

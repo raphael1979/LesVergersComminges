@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCouleursEpidermeTable extends Migration
+class CreatePedonculeTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateCouleursEpidermeTable extends Migration
      */
     public function up()
     {
-     Schema::create('couleurs_epiderme', function (Blueprint $table) {
-        $table->increments('id_couleurs_epiderme');
-        $table->string('value');
-        $table->timestamps();
-    });
- }
+        Schema::create('pedoncule', function (Blueprint $table) {
+            $table->increments('id_pedoncule');
+            $table->string('value');
+            $table->timestamps();
+        });
+    }
 
     /**
      * Reverse the migrations.
@@ -27,6 +27,6 @@ class CreateCouleursEpidermeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('couleurs_epiderme');
-    }
+       Schema::dropIfExists('pedoncule');
+   }
 }
