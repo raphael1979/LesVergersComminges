@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.welcome')
 
 @section('content')
 @if(Session::has('flash_message'))

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.welcome')
 
 @section('content')
 @if(Session::has('flash_message'))
@@ -27,20 +27,20 @@
               <tr>
                 <td style="text-align:center;">
 
-                 <a href="{{ route('appleEdit', $apple->id) }}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                 <a href="{{ route('appleDelete', $apple->id) }}"><i class="fa fa fa-ban" aria-hidden="true"></i></a></td>
-                 <td>{{$apple->nom}}</td>
-                 
-               </tr>
-               @endforeach
-             </tbody>
-           </table>
-           <a href="{{ route('determination') }}" class="btn">Déterminer une variété</a>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
+                {{--  <a href="{{ route('edition', $apple->id) }}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                <a href="{{ route('delete', $apple->id) }}"><i class="fa fa fa-ban" aria-hidden="true"></i></a></td> --}}
+                <td>{{$apple->nom}}</td>
+                
+              </tr>
+              @endforeach
+            </tbody>
+          </table>
+          <a href="{{ route('creation') }}" class="btn">Créez une variété</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
- @endsection
+@endsection

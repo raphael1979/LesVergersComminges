@@ -22,9 +22,6 @@ class ModificationController extends Controller
 	public function creation(Request $request)
 	{
 
-
-
-
 		$apple = new \App\Apple;
 		$apple->nom = $request->input('nom');
 		// $apple->synonyme = $request->input('synonyme');
@@ -45,15 +42,30 @@ class ModificationController extends Controller
 		$apple->save();
 		Session::flash('flash_message', 'La variété a été ajoutée avec succès!');
 
-		return redirect()->route('listApples');
+		return redirect()->route('adminlist');
 
 	}
-	public function show($id)
-	{
-		$apple = App\Apple::findOrFail($id);
 
-		return view('edition', compact('apple'));
-	}
+	// public function show($id)
+	// {
+	// 	$apple = App\Apple::findOrFail($id);
+
+	// 	return view('edition', compact('apple'));
+	// }
+
+	// public function destroy($id)
+	// {
+	// 	$apple = App\Apple::findOrFail($id);
+
+	// 	$apple->delete();
+
+	// 	Session::flash('flash_message', 'La variété a été supprimée avec succès!');
+
+	// 	return redirect()->route('adminlist');
+	// }
+
+
 
 }
+
 

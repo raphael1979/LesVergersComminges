@@ -13,11 +13,13 @@
 
 // Route::get('/', function () {
 // 	return view('index');
+// 	return view('index');
 // });
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/accueil', 'AccueilController@show');
+Route::get('/list', 'ListController@getApples')->name('nos varietes');
 
 // Route::get('/index', 'EvenementController@index')->name('evenement');
 // Route::get('/accueil', 'HomeController@show')->name('index');
@@ -30,6 +32,14 @@ Route::post('/resultat', 'DeterminationController@recherche')->name('resultat');
 //creer modifier et supprimer une variete afficher les infos
 Route::get('/creation', 'ModificationController@index')->name('creation');
 Route::post('/creation', 'ModificationController@creation')->name('createApple');
-Route::get('/edition/{id}, ModificationController@show')->name('edition');
-Route::get('/list', 'ListController@getApples')->name('listApples');
-//Route::get('/description/{id}', 'DescriptionController@index')->name('description');
+Route::get('/edition/{id}',' ModificationController@show')->name('edition');
+Route::get('/edition/{id}', 'ModificationController@delete')->name('supprimer');
+Route::get('/adminlist', 'ModificationController@creation')->name('adminlist');
+
+//Route gallery images
+Route::get('/image-gallery', 'ImageGalleryController@index');
+Route::get('/list-gallery', 'ImageGalleryController@list');
+Route::get('/variety-description', 'ImageGalleryController@description');
+Route::post('image-gallery', 'ImageGalleryController@upload');
+Route::delete('image-gallery/{id}', 'ImageGalleryController@destroy');
+

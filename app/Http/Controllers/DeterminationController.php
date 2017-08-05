@@ -25,40 +25,17 @@ class DeterminationController extends Controller
 			array_push($resultats, $apple);
 		}
 		return $resultats;
-		foreach ($apples as $apple) {
-			# code...
-		}
-		if('id_couleur_epiderme_value', '=', '$request->input("couleur_epiderme")')
-		{
-
-		}
-
-
-		//return view('resultat', compact('apples'));
-
-		// $collection = collect([
-		// 	Apple::All();
-		// 	]);
-
-		// $plucked = $collection->pluck('name');
-
-		// $plucked->all();
-
-// ['Desk', 'Chair']
-
-
-
-
-	// 		if (Apple::All()->where('id_couleur_epiderme_value', '=', '$request->input("couleur_epiderme")')){
-	// 			$resultats[]=$apple;
-	// 			return $resultats;
-	// 		}
-	// 	}
-
-	// }
-
+		
 	}
+}
 
+// foreach($criteres as $critere){
+//   $apples = array_filter($apples, "filter"+$critere->nom);
+// }
+
+// function filter_critere($apple){
+//   return $apple->critere === $valeur_critere_recherchee;
+// }
 
 
 
