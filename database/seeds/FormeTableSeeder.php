@@ -13,11 +13,11 @@ class FormeTableSeeder extends Seeder
     {
     	DB::table('forme')->insert([
     		'value' => 'haute',
-    		
+
     		]);
     	DB::table('forme')->insert([
     		'value' => 'ronde',
-    		
+
     		]);
     	DB::table('forme')->insert([
     		'value' => 'large',

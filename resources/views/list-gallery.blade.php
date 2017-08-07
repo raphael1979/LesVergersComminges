@@ -1,96 +1,55 @@
-<!DOCTYPE html>
+@extends('layouts.welcome')
 
-<html>
+@section('content')
+@if(Session::has('flash_message'))
+<div class="alert alert-success">
+  {{ Session::get('flash_message') }}
+</div>
+@endif
 
-<head>
-
-    <title>Galeries</title>
-
-    <!-- Latest compiled and minified CSS -->
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-
-    <style type="text/css">
-
-    .gallery
-
-    {
-
-        display: inline-block;
-
-        margin-top: 20px;
-
-    }
-
-    .close-icon{
-
-        border-radius: 50%;
-
-        position: absolute;
-
-        right: 5px;
-
-        top: -10px;
-
-        padding: 5px 8px;
-
-    }
-
-    .form-image-upload{
-
-        background: #e8e8e8 none repeat scroll 0 0;
-
-        padding: 15px;
-
-    }
-
-    </style>
-
-</head>
-
-<body>
+<div class="container">
     <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="panel panel-default">
+            <div class="panel-body">
+                <h3>Galerie de photos</h3>
 
-    <h3>List</h3>
+                <div class="row">
 
-    <div class="row">
-
-    <div class='list-group gallery'>
-
-
-            @if($images->count())
-
-                @foreach($images as $image)
-
-                <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
-
-                    <a class="thumbnail fancybox" rel="ligthbox" href="variety-description" target="_bank">
-                        <div class='text-center'>
-                            <small class='text-muted'>{{ $image->title }}</small>
-                        </div> <!-- text-center / end -->
-                        <img class="img-responsive" alt="" src="/images/{{ $image->image }}" />
-                        <div class='text-center'>
-                            <small class='text-muted'>{{ $image->comment }}</small>
-                        </div> <!-- text-center / end -->
-
-                    </a>
-
-                </div> <!-- col-6 / end -->
-
-                @endforeach
-
-            @endif
+                    <div class='list-group gallery'>
 
 
-        </div> <!-- list-group / end -->
+                        @if($images->count())
 
-    </div> <!-- row / end -->
+                        @foreach($images as $image)
 
-</div> <!-- container / end -->
-</body>
-</script>
+                        <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
 
-</html>
+                            <a class="thumbnail fancybox" rel="ligthbox" href="variety-description" target="_bank">
+                                <div class='text-center'>
+                                    <small class='text-muted'>{{ $image->title }}</small>
+                                </div> <!-- text-center / end -->
+                                <img class="img-responsive" alt="" src="/images/{{ $image->image }}" />
+                                <div class='text-center'>
+                                    <small class='text-muted'>{{ $image->comment }}</small>
+                                </div> <!-- text-center / end -->
+
+                            </a>
+
+                        </div> <!-- col-6 / end -->
+
+                        @endforeach
+
+                        @endif
+
+                    </div> <!-- list-group / end -->
+                </div> <!-- row / end -->
+
+            </div> <!-- container / end -->
+        </div>
+    </div>
+</div>
+</div>
+</div>
+@endsection

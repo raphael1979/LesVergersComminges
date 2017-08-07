@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
 	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
+		<div class="col-md-10 col-md-offset-2">
 			<div class="panel panel-default">
 				<div class="panel-body">
 					<div class="container">
@@ -24,7 +24,7 @@
 											<h3>Couleur de l'épiderme</h3>
 											<div class="form-group">
 												{!! Form::label('couleur_epiderme', "Couleur du fond : ") !!}
-												{!! Form::select('couleur_epiderme',['','rouge', 'jaune', 'vert','marron']) !!}
+												{!! Form::select('couleur_epiderme',['','rouge', 'jaune', 'vert','brun']) !!}
 											</div>
 											<div class="form-group">
 												{!! Form::label('couleur_uniforme', "Couleur uniforme : ") !!}
@@ -58,7 +58,7 @@
 												{!! Form::select('calibre',['','petit', 'moyen','gros']) !!}
 											</div>
 
-											<h3>Pédoncule et cavité pédonculaire</h3>
+											{{-- <h3>Pédoncule et cavité pédonculaire</h3>
 											<div class="form-group">
 												{!! Form::label('pedoncule', "Longueur du pédoncule : ") !!}
 												{!! Form::select('pedoncule',['','très court', 'moyen','long']) !!}
@@ -79,7 +79,7 @@
 											<div class="form-group">
 												{!! Form::label('cuvette_oeil_prof', "Cuvette de l'oeil profonde : ") !!}
 												{!! Form::select('cuvette_oeil_prof',['','oui', 'non']) !!}
-											</div>
+											</div> --}}
 											<div class="form-group">
 												{!! Form::submit('Affichez les résultats de votre recherche !') !!} 
 												{!! Form::close() !!}
@@ -95,6 +95,8 @@
 
 
 			<h1>Résultats</h1>
+
+			
 		</div>
 
 		@endsection

@@ -5,8 +5,6 @@
 <div class="alert alert-success">
   {{ Session::get('flash_message') }}
 </div>
-@endif
-
 <div class="container">
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
@@ -15,7 +13,7 @@
 
           <table class="table table-striped">
             <thead>
-              <h4>Toutes nos variétés</h4>
+              <h4>Gérer les variétés</h4>
               <tr>
                 <th>Nom</th>
                 <th>Vignette</th>
@@ -27,20 +25,19 @@
               <tr>
                 <td style="text-align:center;">
 
-                {{--  <a href="{{ route('edition', $apple->id) }}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                <a href="{{ route('delete', $apple->id) }}"><i class="fa fa fa-ban" aria-hidden="true"></i></a></td> --}}
-                <td>{{$apple->nom}}</td>
-                
-              </tr>
-              @endforeach
-            </tbody>
-          </table>
-          <a href="{{ route('creation') }}" class="btn">Créez une variété</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+                 <a href="{{ route('editionApple', $apple->id) }}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                 <a href="{{ route('supprimerApple', $apple->id) }}"><i class="fa fa fa-ban" aria-hidden="true"></i></a></td>
+                 <td>{{$apple->nom}}</td>
 
+               </tr>
+               @endforeach
+             </tbody>
+           </table>
+           {{-- <a href="{{ route('creationApple') }}" class="btn">Créez une variété</a> --}}
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
 
-@endsection
+ @endsection

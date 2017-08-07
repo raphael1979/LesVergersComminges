@@ -13,7 +13,7 @@ class CreateFormeTable extends Migration
      */
     public function up()
     {
-        schema::create('forme', function (Blueprint $table) {
+        Schema::create('forme', function (Blueprint $table) {
             $table->increments('id_forme');
             $table->string('value');
             $table->timestamps();
@@ -27,6 +27,6 @@ class CreateFormeTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('forme2');
     }
 }

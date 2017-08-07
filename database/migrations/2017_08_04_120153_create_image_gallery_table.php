@@ -16,13 +16,13 @@ class CreateImageGalleryTable extends Migration
     {
         Schema::create('image_gallery', function (Blueprint $table) {
 
-           $table->increments('id');
-           $table->string('title');
-           $table->string('image');
-           $table->string('description');
-           $table->timestamps();
+         $table->increments('id');
+         $table->string('title');
+         $table->string('image');
+         $table->string('comment');
+         $table->timestamps();
 
-       });
+     });
     }
 
    /**

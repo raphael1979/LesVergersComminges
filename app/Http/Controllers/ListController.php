@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Apple;
 use App\Synomyne;
-
+use App\ImageGallery;
 class listController extends Controller
 {
     /**
@@ -18,11 +18,26 @@ class listController extends Controller
     {
 
     	$apples = Apple::All();
-    	
+
     	
 
     	return view('list', ['apples'=>$apples]);
     }
+    // public function getApples(Request $request)
+    // {
+
+    //     $apples = Apple::All();
+    //     $images = ::All();
+    //     $apples_img = [];
+    //     $candidats = [];
+    //     foreach (apples as $apple) {
+    //         if (Apple::All()->where('user_id', '=', $user->id)->where('statut_form', '=', '1')->first()) {
+    //             $candidats[]=$user;
+    //         }
+    //     }
+
+    //     return view('listeCandidats', ['candidats'=>$candidats]);
+    // }
 
     /**
     * Show the form for creating a new resource.
