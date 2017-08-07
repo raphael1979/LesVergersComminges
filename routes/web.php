@@ -17,8 +17,9 @@
 // });
 
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'AccueilController@show');
 Route::get('/accueil', 'AccueilController@show');
+Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/list', 'ListController@getApples')->name('nos_varietes');
 
 // Route::get('/index', 'EvenementController@index')->name('evenement');
