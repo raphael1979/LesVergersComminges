@@ -2,11 +2,11 @@
 
 @section('content')
 <body>
- <div class="col-md-12 text-center">
-   <a href="/accueil" class="btn btn-primary" id="retouraccueil">Retour à l'accueil</a>
-</div>
+   <div class="col-md-12 text-center">
+     <a href="/accueil" class="btn btn-primary">Retour à l'accueil</a>
+ </div>
  
-   <img src="{{ asset('/images/ver.jpg') }}"  class="img-responsive center-block " alt=" image message erreur">
+ <img src="{{ asset('/images/ver.jpg') }}"  class="img-responsive center-block " alt=" image message erreur">
 
 
 
