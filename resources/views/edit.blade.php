@@ -9,9 +9,9 @@
 						<table class="table table-striped">
 							<thead>
 								
-								<h2>Créez une nouvelle variété</h2></div>
+								<h2>Modifiez</h2></div>
 								{!! Form::open([
-									'route' => ['ajouterApple']	
+									'route' => ['createApple']	
 									]) !!}
 									<div class="form-group">
 										<h3>Nom et synomymes</h3>
@@ -28,7 +28,7 @@
 									<h3>Couleur de l'épiderme</h3>
 									<div class="form-group">
 										{!! Form::label('couleur_epiderme', "Couleur du fond : ") !!}
-										{!! Form::select('couleur_epiderme',['','rouge', 'jaune', 'vert','brun']) !!}
+										{!! Form::select('couleur_epiderme',['','rouge', 'jaune', 'vert','marron']) !!}
 									</div>
 									<div class="form-group">
 										{!! Form::label('couleur_uniforme', "Couleur uniforme : ") !!}

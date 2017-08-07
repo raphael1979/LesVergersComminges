@@ -21,7 +21,6 @@ class DatabaseSeeder extends Seeder
         $this->call(CouleurUniformeTableSeeder::class);
         $this->call(CuvetteOeilProfTableSeeder::class);
         $this->call(CuvetteOeilTableSeeder::class);
-        $this->call(FormeTableSeeder::class);
         $this->call(LenticelleTableSeeder::class);
         $this->call(LiegeTableSeeder::class);
         $this->call(PedonculeTableSeeder::class);
