@@ -15,37 +15,37 @@
 
     <style type="text/css">
 
-    .gallery
+        .gallery
 
-    {
+        {
 
-        display: inline-block;
+            display: inline-block;
 
-        margin-top: 20px;
+            margin-top: 20px;
 
-    }
+        }
 
-    .close-icon{
+        .close-icon{
 
-        border-radius: 50%;
+            border-radius: 50%;
 
-        position: absolute;
+            position: absolute;
 
-        right: 5px;
+            right: 5px;
 
-        top: -10px;
+            top: -10px;
 
-        padding: 5px 8px;
+            padding: 5px 8px;
 
-    }
+        }
 
-    .form-image-upload{
+        .form-image-upload{
 
-        background: #e8e8e8 none repeat scroll 0 0;
+            background: #e8e8e8 none repeat scroll 0 0;
 
-        padding: 15px;
+            padding: 15px;
 
-    }
+        }
 
     </style>
 
@@ -54,18 +54,18 @@
 <body>
 
 
-<div class="container">
+    <div class="container">
 
 
-    <h3>Galerie Images</h3>
+        <h3>Galerie Images</h3>
 
-    <form action="{{ url('image-gallery') }}" class="form-image-upload" method="POST" enctype="multipart/form-data">
-
-
-        {!! csrf_field() !!}
+        <form action="{{ url('image-gallery') }}" class="form-image-upload" method="POST" enctype="multipart/form-data">
 
 
-        @if (count($errors) > 0)
+            {!! csrf_field() !!}
+
+
+            @if (count($errors) > 0)
 
             <div class="alert alert-danger">
 
@@ -75,7 +75,7 @@
 
                     @foreach ($errors->all() as $error)
 
-                        <li>{{ $error }}</li>
+                    <li>{{ $error }}</li>
 
                     @endforeach
 
@@ -83,71 +83,71 @@
 
             </div>
 
-        @endif
+            @endif
 
 
-        @if ($message = Session::get('success'))
+            @if ($message = Session::get('success'))
 
-        <div class="alert alert-success alert-block">
+            <div class="alert alert-success alert-block">
 
-            <button type="button" class="close" data-dismiss="alert">×</button>
+                <button type="button" class="close" data-dismiss="alert">×</button>
 
                 <strong>{{ $message }}</strong>
 
-        </div>
+            </div>
 
-        @endif
+            @endif
+
+
+            <div class="row">
+
+                <div class="col-md-3">
+
+                    <strong>Title:</strong>
+
+                    <input type="text" name="title" class="form-control" placeholder="Title">
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <strong>Image:</strong>
+
+                    <input type="file" name="image" class="form-control">
+                    
+                </div>
+                {{-- Debut --}}
+
+                <div class="col-md-4">
+
+                    <strong>Description:</strong>
+
+                    <input type="textarea" name="comment" class="form-control" placeholder="Commentaire">
+
+                </div>
+                
+                {{-- Fin --}}
+
+                <div class="col-md-2">
+
+                    <br/>
+
+                    <button type="submit" class="btn btn-success">Upload</button>
+
+                </div>
+
+            </div>
+
+
+        </form> 
 
 
         <div class="row">
 
-            <div class="col-md-3">
-
-                <strong>Title:</strong>
-
-                <input type="text" name="title" class="form-control" placeholder="Title">
-
-            </div>
-
-            <div class="col-md-3">
-
-                <strong>Image:</strong>
-
-                <input type="file" name="image" class="form-control">
-                
-            </div>
-        {{-- Debut --}}
-
-            <div class="col-md-4">
-
-                <strong>Description:</strong>
-
-                <input type="textarea" name="comment" class="form-control" placeholder="Commentaire">
-
-            </div>
-        
-        {{-- Fin --}}
-
-            <div class="col-md-2">
-
-                <br/>
-
-                <button type="submit" class="btn btn-success">Upload</button>
-
-            </div>
-
-        </div>
+            <div class='list-group gallery'>
 
 
-    </form> 
-
-
-    <div class="row">
-
-    <div class='list-group gallery'>
-
-
-            @if($images->count())
+                @if($images->count())
 
                 @foreach($images as $image)
 
@@ -167,11 +167,11 @@
 
                     <form action="{{ url('image-gallery',$image->id) }}" method="POST">
 
-                    <input type="hidden" name="_method" value="delete">
+                        <input type="hidden" name="_method" value="delete">
 
-                    {!! csrf_field() !!}
+                        {!! csrf_field() !!}
 
-                    <button type="submit" class="close-icon btn btn-danger"><i class="glyphicon glyphicon-remove"></i></button>
+                        <button type="submit" class="close-icon btn btn-danger"><i class="glyphicon glyphicon-remove"></i></button>
 
                     </form>
 
@@ -179,14 +179,14 @@
 
                 @endforeach
 
-            @endif
+                @endif
 
 
-        </div> <!-- list-group / end -->
+            </div> <!-- list-group / end -->
 
-    </div> <!-- row / end -->
+        </div> <!-- row / end -->
 
-</div> <!-- container / end -->
+    </div> <!-- container / end -->
 
 
 </body>
