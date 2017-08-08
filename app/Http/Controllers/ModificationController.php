@@ -14,10 +14,10 @@ class ModificationController extends Controller
 // formulaire de creation nouvelle variété
 	public function index()
 	{
-		return view('creation');
-
+		$apples = Apple::all();
+		return view('adminlist', compact('apples'));
 	}
-	
+
 // ajouter les nouveaux enregistrements dans la BDD
 	public function add(Request $request)
 	{
@@ -39,12 +39,12 @@ class ModificationController extends Controller
 		$apple->id_cavite_pedonculaire_prof_value = $request->input('cavite_pedonculaire_prof');
 		$apple->id_cuvette_oeil_prof_value = $request->input('cuvette_oeil_prof');
 		$apple->id_cuvette_oeil_value = $request->input('cuvette_oeil_larg');
-		$apple->signe_particulier_value= $request->input('signe_particulier');
+		$apple->id_signe_particulier_value= $request->input('signe_particulier');
 		
 		$apple->save();
 		Session::flash('flash_message', 'La variete a été ajoutée avec succès!');
 
-		return redirect()->route('nos_varietes');
+		return redirect('list');
 	}
 
 
@@ -91,7 +91,7 @@ class ModificationController extends Controller
 
 		$apple->save();
 		Session::flash('flash_message', 'La variete a été ajoutée avec succès!');
-		return redirect()->route('nos_varietes');
+		return redirect('list');
 	}
 
   /**

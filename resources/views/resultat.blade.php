@@ -1,4 +1,4 @@
- @extends('layouts.welcome')
+ @extends('layouts.app')
 
  @section('content')
  @if(Session::has('flash_message'))
@@ -32,7 +32,7 @@
               @endforeach
             </tbody>
           </table>
-          <a href="{{ route('determination') }}" class="btn">Déterminer une variété</a>
+          <a href="/determination" class="btn">Déterminer une variété</a>
         </div>
       </div>
     </div>

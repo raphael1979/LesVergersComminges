@@ -14,7 +14,7 @@ class CreateApplesTable extends Migration
     public function up()
     {
         Schema::create('apples', function (Blueprint $table) {
-            $table->increments('id_apple');
+            $table->increments('id');
             $table->string('nom')->unique();
             $table->integer('id_couleur_epiderme_value')->nullable();
             $table->integer('id_couleur_uniforme_value')->nullable();
@@ -29,7 +29,7 @@ class CreateApplesTable extends Migration
             $table->integer('id_cavite_pedonculaire_prof_value')->nullable();
             $table->integer('id_cuvette_oeil_value')->nullable();
             $table->integer('id_cuvette_oeil_prof_value')->nullable();
-            $table->string('signe_particulier_value')->nullable();
+            $table->string('id_signe_particulier_value')->nullable();
             
             $table->timestamps();
         });
