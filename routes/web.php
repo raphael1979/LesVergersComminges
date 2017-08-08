@@ -18,8 +18,12 @@
 
 Auth::routes();
 Route::get('/', 'AccueilController@show');
+<<<<<<< HEAD
 Route::get('/home', 'HomeController@index')->name('home');
+=======
+>>>>>>> c097bd142992dd90c48799d3b161440a2852271f
 Route::get('/accueil', 'AccueilController@show');
+Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/list', 'ListController@getApples')->name('nos_varietes');
 Route::get('/adminlist','AdminListController@index')->name('adminlist');
 
@@ -35,11 +39,19 @@ Route::get('/resultat', 'DeterminationController@recherche')->name('resultat');
 //creer lister modifier et supprimer une variete afficher les infos
 Route::get('/creation', 'ModificationController@index')->name('creationApple');
 Route::post('/add', 'ModificationController@add')->name('ajouterApple');
+<<<<<<< HEAD
 Route::get('/show/{id_apple}',' ModificationController@show')->name('voirApple');
 Route::get('/edit/{id_apple}', 'ModificationController@edit')->name('editionApple');
 //Route::post('/store', 'ModificationController@store')->name('storeApple');
 Route::post('/update/{id_apple}', 'ModificationController@update')->name('updateApple');
 Route::get('/delete/{id_apple}', 'ModificationController@destroy')->name('supprimerApple');
+=======
+Route::get('/show/{id}',' ModificationController@show')->name('voirApple');
+Route::get('/edition/{id}', 'ModificationController@edit')->name('editionApple');
+// Route::post('/store', 'ModificationController@store')->name('storeApple');
+Route::post('/update/{id}', 'ModificationController@update')->name('updateApple');
+Route::get('/delete/{id}', 'ModificationController@destroy')->name('supprimerApple');
+>>>>>>> c097bd142992dd90c48799d3b161440a2852271f
 
 //Route gallery images
 Route::get('/image-gallery', 'ImageGalleryController@index');

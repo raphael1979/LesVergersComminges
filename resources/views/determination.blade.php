@@ -18,7 +18,6 @@
 									{!! Form::open([
 										'route' => ['recherche']
 										]) !!}
-										<hr>
 										<div class="descriptif">
 
 											<h3>Couleur de l'épiderme</h3>

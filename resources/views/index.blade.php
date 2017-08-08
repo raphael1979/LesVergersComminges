@@ -3,8 +3,8 @@
 
 <div class="section">
   <div class="row">
-    <div class="col-md-6 col-xs-6"><a href="../list">Identifier une pomme</a></div>
-    <div class="col-md-6 col-xs-6"><a href="#">Nos variétés</a></div>
+    <div class="col-md-6 col-xs-6"><a href="/determination">Identifier une pomme</a></div>
+    <div class="col-md-6 col-xs-6"><a href="/list">Nos variétés</a></div>
 
     <div class="login">
       @if (Route::has('login'))

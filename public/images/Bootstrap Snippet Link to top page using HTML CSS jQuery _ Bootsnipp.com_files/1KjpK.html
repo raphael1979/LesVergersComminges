@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://d2d3qesrx8xj6s.cloudfront.net/iframe/1KjpK -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>Auto-expand in Bootstrap accordion-style list items with in other page anchor link - Bootsnipp.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./bootstrap.css" rel="stylesheet" id="bootstrap-css">
+    <style type="text/css">
+    .list-group-item {
+    width: 100%;
+    text-align: left;
+}
+    </style>
+    <script src="./jquery-1.10.2.min.js"></script>
+    <script src="./bootstrap.js"></script>
+    <script type="text/javascript">
+        window.alert = function(){};
+        var defaultCSS = document.getElementById('bootstrap-css');
+        function changeCSS(css){
+            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />'); 
+            else $('head > link').filter(':first').replaceWith(defaultCSS); 
+        }
+        $( document ).ready(function() {
+          var iframe_height = parseInt($('html').height()); 
+          window.parent.postMessage( iframe_height, 'https://bootsnipp.com');
+        });
+    </script>
+</head>
+<body style="">
+	<div class="container">
+    <h1>First Pag Add</h1>
+       <div class="row">
+		<a href="https://d2d3qesrx8xj6s.cloudfront.net/iframe/accordion.html?#one">One</a><br>
+		<a href="https://d2d3qesrx8xj6s.cloudfront.net/iframe/accordion.html?#two">Two</a><br>
+		<a href="https://d2d3qesrx8xj6s.cloudfront.net/iframe/accordion.html?#tree">Tree</a><br>
+		<a href="https://d2d3qesrx8xj6s.cloudfront.net/iframe/accordion.html?#four">Four</a><br>
+		<a href="https://d2d3qesrx8xj6s.cloudfront.net/iframe/accordion.html?#five">Five</a><br>
+		<a href="https://d2d3qesrx8xj6s.cloudfront.net/iframe/accordion.html?#six">Six</a><br>
+		<a href="https://d2d3qesrx8xj6s.cloudfront.net/iframe/accordion.html?#seven">Seven</a><br>
+		<a href="https://d2d3qesrx8xj6s.cloudfront.net/iframe/accordion.html?#eigth">Eigth</a><br>
+		<a href="https://d2d3qesrx8xj6s.cloudfront.net/iframe/accordion.html?#nine">Nine</a><br>
+		<a href="https://d2d3qesrx8xj6s.cloudfront.net/iframe/accordion.html?#ten">Ten</a><br>
+		</div>
+	</div>
+
+
+
+<div class="container">
+    <h1>Second Page Add</h1>
+       <div class="row">
+
+	   <div class="panel list-group">
+		    <a id="one"></a>
+		    <button class="list-group-item" data-toggle="collapse" data-target="#item-1" data-parent="#accordion"><strong>This is 1</strong></button>
+		    <div id="item-1" class="collapse">
+		        No. What is on second.
+		    </div>
+		</div>
+
+		<div class="panel list-group">
+		    <a id="two"></a>
+		    <button class="list-group-item" data-toggle="collapse" data-target="#item-2" data-parent="#accordion"><strong>This is 2</strong></button>
+		    <div id="item-2" class="collapse">
+		        No. What is on second.
+		    </div>
+		</div>
+
+		<div class="panel list-group">
+		    <a id="tree"></a>
+		    <button class="list-group-item" data-toggle="collapse" data-target="#item-3" data-parent="#accordion"><strong>This is 3</strong></button>
+		    <div id="item-3" class="collapse">
+		        No. What is on second.
+		    </div>
+		</div>
+
+		<div class="panel list-group">
+		    <a id="four"></a>
+		    <button class="list-group-item" data-toggle="collapse" data-target="#item-4" data-parent="#accordion"><strong>This is 4</strong></button>
+		    <div id="item-4" class="collapse">
+		        No. What is on second.
+		    </div>
+		</div>
+
+		<div class="panel list-group">
+		    <a id="five"></a>
+		    <button class="list-group-item" data-toggle="collapse" data-target="#item-5" data-parent="#accordion"><strong>This is 5</strong></button>
+		    <div id="item-5" class="collapse">
+		        No. What is on second.
+		    </div>
+		</div>
+
+		<div class="panel list-group">
+		    <a id="six"></a>
+		    <button class="list-group-item" data-toggle="collapse" data-target="#item-6" data-parent="#accordion"><strong>This is 6</strong></button>
+		    <div id="item-6" class="collapse">
+		        No. What is on second.
+		    </div>
+		</div>
+
+		<div class="panel list-group">
+		    <a id="seven"></a>
+		    <button class="list-group-item" data-toggle="collapse" data-target="#item-7" data-parent="#accordion"><strong>This is 7</strong></button>
+		    <div id="item-7" class="collapse">
+		        No. What is on second.
+		    </div>
+		</div>
+
+		<div class="panel list-group">
+		    <a id="eigth"></a>
+		    <button class="list-group-item" data-toggle="collapse" data-target="#item-8" data-parent="#accordion"><strong>This is 8</strong></button>
+		    <div id="item-8" class="collapse">
+		        No. What is on second.
+		    </div>
+		</div>
+
+		<div class="panel list-group">
+		    <a id="nine"></a>
+		    <button class="list-group-item" data-toggle="collapse" data-target="#item-9" data-parent="#accordion"><strong>This is 9</strong></button>
+		    <div id="item-9" class="collapse">
+		        No. What is on second.
+		    </div>
+		</div>
+
+		<div class="panel list-group">
+		    <a id="ten"></a>
+		    <button class="list-group-item" data-toggle="collapse" data-target="#item-10" data-parent="#accordion"><strong>This is 10</strong></button>
+		    <div id="item-10" class="collapse">
+		        No. What is on second.
+		    </div>
+		</div>
+
+	</div>
+    
+</div>
+
+	<script type="text/javascript">
+	//
+// accordionExpand.js
+//
+// Checks for hash in url and
+// expands an accordion list
+// =============================
+jQuery(document).ready(function($) {
+    
+    var hash        = window.location.hash, // Hash from the url
+    accordionGroup  = $('.panel.list-group'), // List groups
+    accordionExists = accordionGroup.length;
+    
+    // If url fragment and accordion both exist...
+    if(hash && accordionExists) {
+      // Find the button sibling of the anchor and click it
+      accordionGroup.find(hash).siblings('button.list-group-item').click();
+    }
+});
+	</script>
+
+
+</body></html>
