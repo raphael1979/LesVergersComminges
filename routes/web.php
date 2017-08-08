@@ -18,8 +18,12 @@
 
 Auth::routes();
 Route::get('/', 'AccueilController@show');
+<<<<<<< HEAD
 Route::get('/home', 'HomeController@index')->name('home');
+=======
+>>>>>>> d1c65a2987d779707c6934a17459f63a629c0f39
 Route::get('/accueil', 'AccueilController@show');
+Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/list', 'ListController@getApples')->name('nos_varietes');
 Route::get('/adminlist','AdminListController@index')->name('adminlist');
 

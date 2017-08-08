@@ -9,7 +9,6 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="/style.css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 
@@ -39,13 +38,17 @@
             </div>
         </div>
     </footer>
-    <section>
-        {{-- essai srcolltop --}}
-{{-- <a class="scrolltop" href="#"><span class="fa fa-angle-up"></span></a>
+    {{-- essai srcolltop --}}
+        {{-- <a class="scrolltop" href="#"><span class="fa fa-angle-up"></span></a>
 
-<button class="btn_up">
-    <span  class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
-</button> --}}
+        <button class="btn_up">
+            <span  class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+        </button> --}}
+        <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up">
+        </span>
+    </a>
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/backToTop.js') }}"></script>
 </body>
 </html>
 
