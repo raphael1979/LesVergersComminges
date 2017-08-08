@@ -16,7 +16,8 @@
 
 
 									{!! Form::open([
-										'route' => ['recherche']
+										'url' => ['resultat'],
+										'method' => 'get'
 										]) !!}
 										<div class="descriptif">
 

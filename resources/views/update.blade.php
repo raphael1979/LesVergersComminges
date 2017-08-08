@@ -10,7 +10,7 @@
 						<thead>
 							<h2>Créez une nouvelle variété</h2>
 							{!! Form::open([
-							'url' => ['add']	
+							'url' => ['update']
 							]) !!}
 							<h3>Nom et synomymes</h3>
 							<div class="form-group">
