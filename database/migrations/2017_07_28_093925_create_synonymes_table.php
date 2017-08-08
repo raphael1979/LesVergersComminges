@@ -16,7 +16,7 @@ class CreateSynonymesTable extends Migration
         Schema::create('synonymes', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('apple_id');
-            $table->string('value')->nullable(); 
+            $table->string('value')->nullable();
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateSynonymesTable extends Migration
      */
     public function down()
     {
-       Schema::dropIfExists('synonymes');
-   }
+     Schema::dropIfExists('synonymes');
+ }
 }

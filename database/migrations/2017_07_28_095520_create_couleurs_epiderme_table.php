@@ -13,12 +13,12 @@ class CreateCouleursEpidermeTable extends Migration
      */
     public function up()
     {
-     Schema::create('couleurs_epiderme', function (Blueprint $table) {
+       Schema::create('couleurs_epiderme', function (Blueprint $table) {
         $table->increments('id_couleurs_epiderme');
         $table->string('value');
         $table->timestamps();
     });
- }
+   }
 
     /**
      * Reverse the migrations.
