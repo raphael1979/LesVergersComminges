@@ -37,7 +37,7 @@ Route::get('/creation', 'ModificationController@index')->name('creationApple');
 Route::post('/add', 'ModificationController@add')->name('ajouterApple');
 Route::get('/show/{id}',' ModificationController@show')->name('voirApple');
 Route::get('/edition/{id}', 'ModificationController@edit')->name('editionApple');
-Route::post('/store', 'ModificationController@store')->name('storeApple');
+// Route::post('/store', 'ModificationController@store')->name('storeApple');
 Route::post('/update/{id}', 'ModificationController@update')->name('updateApple');
 Route::get('/delete/{id}', 'ModificationController@destroy')->name('supprimerApple');
 
