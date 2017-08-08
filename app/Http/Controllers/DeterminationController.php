@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\Controller;
@@ -44,10 +45,12 @@ class DeterminationController extends Controller
 		
 		
 		$filtered = $collection	
-		-> where('id_couleur_epiderme_value', $request->input('couleur_epiderme'));
+		-> where('id_couleur_epiderme_value', $request->input('couleur_epiderme'))
+		->orWhere('id_couleur_epiderme_value', '<', 1)
+		-> where ('id_couleur_uniforme_value', $request->input('couleur_uniforme'));
 
-		
-		// $filtered=$filtered-> where ('id_couleur_uniforme_value', $request->input('couleur_uniforme'));
+
+
 
 		$filtered->all();
 		$plucked = $filtered->pluck('nom'); 

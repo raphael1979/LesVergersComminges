@@ -70,6 +70,9 @@ footer{
 	font-size: 14px;
 	font-family: "Open Sans", sans-serif;
 }
+.btn{
+	color:green;
+}
 /*Debut Bouton "Retour en haut de page*/
 /*.btn_up {
 	display: none;

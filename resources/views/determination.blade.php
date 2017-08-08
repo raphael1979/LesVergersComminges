@@ -58,7 +58,7 @@
 												{!! Form::select('calibre',['','petit', 'moyen','gros']) !!}
 											</div>
 
-											{{-- <h3>Pédoncule et cavité pédonculaire</h3>
+											<h3>Pédoncule et cavité pédonculaire</h3>
 											<div class="form-group">
 												{!! Form::label('pedoncule', "Longueur du pédoncule : ") !!}
 												{!! Form::select('pedoncule',['','très court', 'moyen','long']) !!}
@@ -79,7 +79,7 @@
 											<div class="form-group">
 												{!! Form::label('cuvette_oeil_prof', "Cuvette de l'oeil profonde : ") !!}
 												{!! Form::select('cuvette_oeil_prof',['','oui', 'non']) !!}
-											</div> --}}
+											</div>
 											<div class="form-group">
 												{!! Form::submit('Affichez les résultats de votre recherche !') !!} 
 												{!! Form::close() !!}

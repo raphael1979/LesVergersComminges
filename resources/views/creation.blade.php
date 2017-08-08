@@ -13,19 +13,21 @@
 								{!! Form::open([
 									'route' => ['ajouterApple']	
 									]) !!}
+
 									<div class="form-group">
 										<h3>Nom et synomymes</h3>
 									</div>
 									<div class="form-group">
-										{!! Form::label('nom') !!}
+										{!! Form::label('nom')  !!}
 										{!! Form::text('nom') !!}
 									</div>
-									{{-- <div class="form-group">
-										{!! Form::label('synonyme') !!}
-										{!! Form::text('synomyme') !!}
+									<div >
+										{!! Form::label('Synomymes si plusieurs format xxx/yyy') !!}
+										{!! Form::text('synomyne') !!}
 									</div>
-									--}}
-									<h3>Couleur de l'épiderme</h3>
+									<div class="form-group">
+										<h3>Couleur de l'épiderme</h3>
+									</div>
 									<div class="form-group">
 										{!! Form::label('couleur_epiderme', "Couleur du fond : ") !!}
 										{!! Form::select('couleur_epiderme',['','rouge', 'jaune', 'vert','brun']) !!}
@@ -61,6 +63,7 @@
 										{!! Form::label('calibre', "Calibre : ") !!}
 										{!! Form::select('calibre',['','petit', 'moyen','gros']) !!}
 									</div>
+									
 									<div class="form-group">
 										<h3>Pédoncule et cavité pédonculaire</h3>
 									</div>
@@ -76,33 +79,35 @@
 										{!! Form::label('cavite_pedonculaire_prof', "Cavité pédonculaire profonde: ") !!}
 										{!! Form::select('cavite_pedonculaire_prof',['','oui', 'non']) !!}
 									</div>
+
 									<div class="form-group">
-										<h3>Cuvette de l'oeil</h3></div>
+										<h3>Cuvette de l'oeil</h3>
+									</div>
+									<div class="form-group">
 										<div class="form-group">
-											<div class="form-group">
-												{!! Form::label('cuvette_oeil_larg', "Largeur de la cuvette de l'oeil : ") !!}
-												{!! Form::select('cuvette_oeil_larg',['','etroite', 'large']) !!}
-											</div>
-											<div class="form-group">
-												{!! Form::label('cuvette_oeil_prof', "Cuvette de l'oeil profonde : ") !!}
-												{!! Form::select('cuvette_oeil_prof',['','oui', 'non']) !!}
-											</div>
-											<div class="form-group">
-												{!! Form::label('signe_particulier', "Signe particulier: ") !!}
-												{!! Form::textarea('signe_particulier_value',null) !!}
-											</div>
+											{!! Form::label('cuvette_oeil_larg', "Largeur de la cuvette de l'oeil : ") !!}
+											{!! Form::select('cuvette_oeil_larg',['','etroite', 'large']) !!}
+										</div>
+										<div class="form-group">
+											{!! Form::label('cuvette_oeil_prof', "Cuvette de l'oeil profonde : ") !!}
+											{!! Form::select('cuvette_oeil_prof',['','oui', 'non']) !!}
+										</div>
+										<div class="form-group">
+											{!! Form::label('signe_particulier', "Signe particulier: ") !!}
+											{!! Form::text('signe_particulier') !!}
+										</div>
 
-											<div class="form-group">
-												{!! Form::submit('Créez une nouvelle variété !') !!}
-												{!! Form::close() !!}
-											</div>
+										<div class="form-group">
+											{!! Form::submit('Créez une nouvelle variété !') !!}
+											{!! Form::close() !!}
+										</div>
 
-											@endsection
-										</thead>
-									</table>
-								</div>
+										@endsection
+									</thead>
+								</table>
 							</div>
 						</div>
 					</div>
 				</div>
+			</div>
 
