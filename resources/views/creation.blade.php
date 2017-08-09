@@ -9,6 +9,9 @@
 
 					<table class="table table-striped">
 						<thead>
+							<div class="col-md-12 text-center">
+								<a href="/accueil" class="btn btn-">Retour à l'accueil</a>
+							</div>
 							<h2>Créez une nouvelle variété</h2>
 							{!! Form::open([
 								'url' => ['add']	

@@ -15,6 +15,9 @@
             <div class="panel-body">
 
                 <div class="container">
+                    <div class="col-md-12 text-center">
+                        <a href="/accueil" class="btn btn-">Retour à l'accueil</a>
+                    </div>
 
                     <h3>Description</h3>
 

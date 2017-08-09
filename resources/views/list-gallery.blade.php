@@ -13,6 +13,9 @@
         <div class="col-md-8 col-md-offset-2">
           <div class="panel panel-default">
             <div class="panel-body">
+                <div class="col-md-12 text-center">
+                    <a href="/accueil" class="btn btn-">Retour à l'accueil</a>
+                </div>
                 <h3>Galerie de photos</h3>
 
                 <div class="row">

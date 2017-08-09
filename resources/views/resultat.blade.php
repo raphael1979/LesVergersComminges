@@ -15,6 +15,9 @@
 
           <table class="table table-striped">
             <thead>
+              <div class="col-md-12 text-center">
+                <a href="/accueil" class="btn btn-">Retour à l'accueil</a>
+              </div>
               <h4>Votre selection</h4>
               <tr>
                 <th>Nom</th>
