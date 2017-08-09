@@ -44,30 +44,10 @@ class ModificationController extends Controller
 		$apple->save();
 		Session::flash('flash_message', 'La variete a été ajoutée avec succès!');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-		$synonymes = $request->input('synonyme');
-=======
-		return redirect('list');
-	}
->>>>>>> c0b6756a1e903331e64bf95f8e6d39e300294c8e
-
-		$synonymes = explode('/',$synonymes);
-
-		foreach ($synonymes as $synonyne) {
-
-			$synonyme = new \App\Synonyme;
-			$synonyme->nom = $synonyme;
-			$synonyme->apple_id = $apple->id;
-		}
-
-<<<<<<< HEAD
-=======
 		// $synonymes = new \App\Synomyme;
 		// $synonymes = $request->input('synonyme');
 
 		// $synonymes = explode('/',$synonymes);
->>>>>>> origin/odile
 
 		// foreach ($synonymes as $synonyne) {
 
@@ -76,10 +56,6 @@ class ModificationController extends Controller
 		// 	$synonyme->apple_id = $apple->id;
 		// }
 		return redirect('list');
-<<<<<<< HEAD
->>>>>>> c0b6756a1e903331e64bf95f8e6d39e300294c8e
-=======
->>>>>>> origin/odile
 	}
 
 	// enregistrement sur le storage des informations variétés
@@ -155,27 +131,11 @@ class ModificationController extends Controller
   * @param  int  $id
   * @return \Illuminate\Http\Response
   */
-<<<<<<< HEAD
-<<<<<<< HEAD
-  public function edit($id_apple)
-  {
-  	$apple = Apple::findOrFail($id_apple);
-=======
->>>>>>> origin/odile
 
   public function edit($id)
   {
-<<<<<<< HEAD
-  	$input = $request->all();
-
-  	$apple->fill($input)->save();
-
-  	return view('edit', compact($apple));
->>>>>>> c0b6756a1e903331e64bf95f8e6d39e300294c8e
-=======
     $apple= Apple::findOrFail($id);
     return view('edit', ['apple' => $apple]);
->>>>>>> origin/odile
   }
 
 

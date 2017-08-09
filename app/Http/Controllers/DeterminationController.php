@@ -54,14 +54,6 @@ class DeterminationController extends Controller
 		'profondeur cuvette oeil'
 		];
 
-<<<<<<< HEAD
-		$collection = collect($apples);
-		$filtered = $collection	
-<<<<<<< HEAD
-		-> where('id_couleur_epiderme_value', $request->input('couleur_epiderme'))
-		->orWhere('id_couleur_epiderme_value', '<', 1)
-		-> where ('id_couleur_uniforme_value', $request->input('couleur_uniforme'));
-=======
 		$apple_criteres=[
 		$request->couleur_epiderme,
 		$request->couleur_uniforme,
@@ -77,7 +69,6 @@ class DeterminationController extends Controller
 		$request->cuvette_oeil,
 		$request->cuvette_oeil_prof
 		];
->>>>>>> origin/odile
 
 		// $collection = collect($apples);
 
@@ -86,22 +77,6 @@ class DeterminationController extends Controller
 
 		$result=[];
 
-<<<<<<< HEAD
-=======
-		-> where('id_couleur_epiderme_value', $request->input('couleur_epiderme'));
-		// $filtered=$filtered-> where ('id_couleur_uniforme_value', $request->input('couleur_uniforme'));
->>>>>>> c0b6756a1e903331e64bf95f8e6d39e300294c8e
-		$filtered->all();
-		$plucked = $filtered->pluck('nom'); 
-		return($plucked);
-		// -> where ('id_strie_value', $request->input('strie'))
-		// -> where ('id_coloration_value', $request->input('coloration'))
-		// -> where ('id_lenticelle_value', $request->input('lenticelle'))
-		// -> where ('id_liege_value', $request->input('liege'))
-		// -> where ('id_forme_value', $request->input('forme'))
-		// -> where ('id_calibre_value', $request->input('calibre'))
-		// -> where ('id_pedoncule_value', $request->input('pedoncule'));
-=======
 		foreach ($apples as $apple) {
 			// dd($apple);
 			$count = 0;
@@ -129,7 +104,6 @@ class DeterminationController extends Controller
 		});
 		// dd($result);
 		return view('resultat', compact('result')); 
->>>>>>> origin/odile
 	}
 }
 

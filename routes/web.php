@@ -24,17 +24,7 @@ Route::get('/home', function(){
 Auth::routes();
 Route::get('/', 'AccueilController@show');
 Route::get('/accueil', 'AccueilController@show');
-<<<<<<< HEAD
-<<<<<<< HEAD
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/list', 'ListController@getApples')->name('nos_varietes');
-Route::get('/adminlist','AdminListController@index')->name('adminlist');
-=======
 Route::get('/list', 'ListController@getApples');
->>>>>>> c0b6756a1e903331e64bf95f8e6d39e300294c8e
-=======
-Route::get('/list', 'ListController@getApples');
->>>>>>> origin/odile
 
 // Route::get('/index', 'EvenementController@index')->name('evenement');
 // Route::get('/accueil', 'HomeController@show')->name('index');
@@ -46,19 +36,7 @@ Route::get('/resultat', 'DeterminationController@recherche');
 
 //Admin : 
 //creer lister modifier et supprimer une variete afficher les infos
-<<<<<<< HEAD
-<<<<<<< HEAD
-Route::get('/creation', 'ModificationController@index')->name('creationApple');
-Route::post('/add', 'ModificationController@add')->name('ajouterApple');
-Route::get('/show/{id_apple}',' ModificationController@show')->name('voirApple');
-Route::get('/edit/{id_apple}', 'ModificationController@edit')->name('editionApple');
-//Route::post('/store', 'ModificationController@store')->name('storeApple');
-Route::post('/update/{id_apple}', 'ModificationController@update')->name('updateApple');
-Route::get('/delete/{id_apple}', 'ModificationController@destroy')->name('supprimerApple');
-=======
-=======
 
->>>>>>> origin/odile
 Route::get('/adminlist', 'ModificationController@index');
 Route::get('/creation', function(){
 	return view('creation');
@@ -69,11 +47,6 @@ Route::get('/edition/{id}', 'ModificationController@edit');
 // Route::post('/store', 'ModificationController@store')->name('storeApple');
 Route::post('/update/{id}', 'ModificationController@update')->name('update');
 Route::get('/delete/{id}', 'ModificationController@destroy');
-<<<<<<< HEAD
->>>>>>> c0b6756a1e903331e64bf95f8e6d39e300294c8e
-
-=======
->>>>>>> origin/odile
 //Route gallery images
 Route::get('/image-gallery', 'ImageGalleryController@index');
 Route::get('/list-gallery', 'ImageGalleryController@list');

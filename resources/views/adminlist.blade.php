@@ -35,46 +35,6 @@
 									<a href="/edition/{{ $apple->id }}" class="btn btn-default btn-sm"><i class="fa fa-pencil" aria-hidden="true"></i>Modifier</a>
 									<a href="/delete/{{ $apple->id }}" class="btn btn-default btn-sm"><i class="fa fa fa-ban" aria-hidden="true"></i>Supprimer</a>
 								</td>
-<<<<<<< HEAD
-								<td>
-									{{ $apple->nom }}
-								</td>
-
-<<<<<<< HEAD
-          <table class="table table-striped">
-            <thead>
-              <h3>Gérer les variétés</h3>
-              <a href="{{ route('creationApple') }}" class="btn">Ajouter une nouvelle variété</a>
-              <tr>
-                <th>Nom</th>
-
-                
-              </tr>
-            </thead>
-            <tbody>
-              @foreach ($apples as $apple)
-              <tr>
-                <td style="text-align:center;">
-                  <td>{{$apple->nom}}</td>
-                  
-                  <td>
-                    <a href="{{ route('editionApple', $apple->id_apple) }} " class="btn btn-default btn-sm">modifier</a>
-                    <a href="{{ route('supprimerApple', $apple->id_apple) }}" class="btn btn-default btn-sm">supprimer</a></td>
-
-                  </tr>
-                  @endforeach
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    @endsection
-=======
-=======
->>>>>>> origin/odile
 							</tr>
 							@endforeach
 						</tbody>
@@ -89,7 +49,3 @@
 
 @section('js')
 @endsection
-<<<<<<< HEAD
->>>>>>> c0b6756a1e903331e64bf95f8e6d39e300294c8e
-=======
->>>>>>> origin/odile
