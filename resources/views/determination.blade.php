@@ -1,4 +1,4 @@
-@extends('layouts.welcome')
+@extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -16,7 +16,8 @@
 
 
 									{!! Form::open([
-										'route' => ['recherche']
+										'url' => ['resultat'],
+										'method' => 'get'
 										]) !!}
 										<div class="descriptif">
 

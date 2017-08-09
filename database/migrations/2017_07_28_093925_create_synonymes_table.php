@@ -16,7 +16,11 @@ class CreateSynonymesTable extends Migration
         Schema::create('synonymes', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('apple_id');
+<<<<<<< HEAD
             $table->string('value')->nullable(); 
+=======
+            $table->string('value')->nullable();
+>>>>>>> c0b6756a1e903331e64bf95f8e6d39e300294c8e
             $table->timestamps();
         });
     }

@@ -16,11 +16,10 @@ class DeterminationController extends Controller
 	public function index()
 	{
 		return view('determination');
-
 	}
+
 	public function recherche(Request $request)
 	{
-		
 
 		$apples = Apple::All();
 		
@@ -40,11 +39,9 @@ class DeterminationController extends Controller
 		'id_cuvette_oeil_prof_value',
 		'signe_particulier_value'];
 
-		
 		$collection = collect($apples);
-		
-		
 		$filtered = $collection	
+<<<<<<< HEAD
 		-> where('id_couleur_epiderme_value', $request->input('couleur_epiderme'))
 		->orWhere('id_couleur_epiderme_value', '<', 1)
 		-> where ('id_couleur_uniforme_value', $request->input('couleur_uniforme'));
@@ -52,15 +49,13 @@ class DeterminationController extends Controller
 
 
 
+=======
+		-> where('id_couleur_epiderme_value', $request->input('couleur_epiderme'));
+		// $filtered=$filtered-> where ('id_couleur_uniforme_value', $request->input('couleur_uniforme'));
+>>>>>>> c0b6756a1e903331e64bf95f8e6d39e300294c8e
 		$filtered->all();
 		$plucked = $filtered->pluck('nom'); 
-
-
-
-		return ($plucked);
-
-
-
+		return($plucked);
 		// -> where ('id_strie_value', $request->input('strie'))
 		// -> where ('id_coloration_value', $request->input('coloration'))
 		// -> where ('id_lenticelle_value', $request->input('lenticelle'))
@@ -68,10 +63,6 @@ class DeterminationController extends Controller
 		// -> where ('id_forme_value', $request->input('forme'))
 		// -> where ('id_calibre_value', $request->input('calibre'))
 		// -> where ('id_pedoncule_value', $request->input('pedoncule'));
-
-
-
-
 	}
 }
 

@@ -11,7 +11,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-    	$this->call(UsersTableSeeder::class);
+        $this->call(UsersTableSeeder::class);
         $this->call(CalibreTableSeeder::class);
         $this->call(PedonculeTableSeeder::class);
         $this->call(CavitePedonculaireLargTableSeeder::class);
@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
         $this->call(PedonculeTableSeeder::class);
         $this->call(SigneParticulierTableSeeder::class);
         $this->call(StrieTableSeeder::class);
+    	$this->call(ApplesTableSeeder::class);
     }
 
 }

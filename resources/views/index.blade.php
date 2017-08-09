@@ -1,11 +1,14 @@
-@extends('layouts.welcome')
+@extends('layouts.app')
 @section('content')
 
 <div class="section">
   <div class="row">
     <div class="col-md-6 col-xs-6"><a href="/determination">Identifier une pomme</a></div>
+    @if(Auth::guest())
     <div class="col-md-6 col-xs-6"><a href="/list">Nos variétés</a></div>
-
+    @else
+    <div class="col-md-6 col-xs-6"><a href="/adminlist">Gerer Nos variétés</a></div>
+    @endif
     <div class="login">
       @if (Route::has('login'))
       <div class="">

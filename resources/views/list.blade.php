@@ -1,4 +1,4 @@
-@extends('layouts.welcome')
+@extends('layouts.app')
 
 @section('content')
 @if(Session::has('flash_message'))
@@ -15,7 +15,11 @@
 
           <table class="table table-striped">
             <thead>
+<<<<<<< HEAD
               <div><a href="{{ route('determination') }} " class="btn">Déterminer une variété </a></div>
+=======
+              <div> <a href="/determination" class="btn">Déterminer une variété</a></div>
+>>>>>>> c0b6756a1e903331e64bf95f8e6d39e300294c8e
               <h4>Toutes nos variétés</h4>
               <tr>
                 <th>Nom</th>
