@@ -45,7 +45,7 @@ Route::post('/add', 'ModificationController@add');
 Route::get('/show/{id}','ModificationController@show');
 Route::get('/edition/{id}', 'ModificationController@edit');
 // Route::post('/store', 'ModificationController@store')->name('storeApple');
-Route::put('/update/', 'ModificationController@update');
+Route::post('/update/{id}', 'ModificationController@update')->name('update');
 Route::get('/delete/{id}', 'ModificationController@destroy');
 //Route gallery images
 Route::get('/image-gallery', 'ImageGalleryController@index');

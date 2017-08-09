@@ -115,11 +115,12 @@ class ModificationController extends Controller
   {
   	// $apple = Apple::findOrFail($id);
   	
-  	$apple = Apple::all()->where('id', '=', $id)->first();
+  	// $apple = Apple::all()->where('id', '=', $id)->first();
 
+    $apple= Apple::findOrFail($id);
 
-
-  	return view('/showApple', compact('apple'));
+    // return view('/showApple', compact('apple'));
+    return view('showApple', ['apple' => $apple]);
   }
 
 
@@ -133,13 +134,8 @@ class ModificationController extends Controller
 
   public function edit($id)
   {
-    $apple=Apple::all()->where('id', '=', $id)->first();
-
-    // $input = $request->all();
-
-    $apple->fill($input)->save();
-
-    return view('edit', compact($apple));
+    $apple= Apple::findOrFail($id);
+    return view('edit', ['apple' => $apple]);
   }
 
 
@@ -154,29 +150,29 @@ class ModificationController extends Controller
   public function update($id, Request $request)
   {
 
-  	$apple = Apple::all()->where('id', '=', $request->input('id'))->first();
+  	$apple = Apple::all()->where('id', '=', $id)->first();
 
-  	$apple->nom = $request->input('nom');
 	// $synomyme->synonyme = $request->input('synonyme');
-  	$apple->id_couleur_epiderme_value = $request->input('couleur_epiderme');
-  	$apple->id_couleur_uniforme_value = $request->input('couleur_uniforme');
-  	$apple->id_strie_value = $request->input('strie');
-  	$apple->id_coloration_value = $request->input('coloration');
-  	$apple->id_lenticelle_value= $request->input('lenticelle');
-  	$apple->id_liege_value = $request->input('liege');
-  	$apple->id_forme_value = $request->input('forme');
-  	$apple->id_calibre_value = $request->input('calibre');
-  	$apple->id_cavite_pedonculaire_larg_value = $request->input('cavite_pedonculaire_larg');
-  	$apple->id_cavite_pedonculaire_prof_value = $request->input('cavite_pedonculaire_prof');
-  	$apple->id_cuvette_oeil_prof_value = $request->input('cuvette_oeil_prof');
-  	$apple->id_cuvette_oeil_value = $request->input('cuvette_oeil_larg');
-  	$apple->id_signe_particulier_value= $request->input('signe_particulier');
+  	$apple->nom = $request->input('nom');
+    $apple->id_couleur_epiderme_value = $request->input('couleur_epiderme');
+    $apple->id_couleur_uniforme_value = $request->input('couleur_uniforme');
+    $apple->id_strie_value = $request->input('strie');
+    $apple->id_coloration_value = $request->input('coloration');
+    $apple->id_lenticelle_value= $request->input('lenticelle');
+    $apple->id_liege_value = $request->input('liege');
+    $apple->id_forme_value = $request->input('forme');
+    $apple->id_calibre_value = $request->input('calibre');
+    $apple->id_cavite_pedonculaire_larg_value = $request->input('cavite_pedonculaire_larg');
+    $apple->id_cavite_pedonculaire_prof_value = $request->input('cavite_pedonculaire_prof');
+    $apple->id_cuvette_oeil_prof_value = $request->input('cuvette_oeil_prof');
+    $apple->id_cuvette_oeil_value = $request->input('cuvette_oeil_larg');
+    $apple->id_signe_particulier_value= $request->input('signe_particulier');
 
-  	$apple->update();
+    $apple->update();
 
-  	Session::flash('flash_message', 'La variété a été modifiée avec succès!');
+    Session::flash('flash_message', 'La variété a été modifiée avec succès!');
 
-  	return redirect('adminlist');
+    return redirect('adminlist');
 
   	// $this->validate($request, [
   	// 	'nom' => 'required|max:255',
@@ -195,9 +191,9 @@ class ModificationController extends Controller
   	// 	'id_signe_particulier_value'=>nullable(),
   	// 	]);
 
-  	$input = $request->all();
+    $input = $request->all();
 
-  	$apple->fill($input)->save();
+    $apple->fill($input)->save();
   }
 
 
