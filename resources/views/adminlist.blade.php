@@ -20,18 +20,22 @@
 							<h4>Gérer les variétés</h4>
 							<a href='creation' class="btn">Créez une variété</a>
 							<tr>
-								<th>action</th>
 								<th>Nom</th>
+								<th>action</th>
 							</tr>
 						</thead>
 						<tbody>
 							@foreach ($apples as $apple)
 							<tr>
 								<td>
+									{{ $apple->nom }}
+								</td>
+								<td>
 									<a href="/show/{{ $apple->id }}" class="btn btn-default btn-sm"><i class="fa fa-pencil" aria-hidden="true"></i>Voir</a>
 									<a href="/edition/{{ $apple->id }}" class="btn btn-default btn-sm"><i class="fa fa-pencil" aria-hidden="true"></i>Modifier</a>
 									<a href="/delete/{{ $apple->id }}" class="btn btn-default btn-sm"><i class="fa fa fa-ban" aria-hidden="true"></i>Supprimer</a>
 								</td>
+<<<<<<< HEAD
 								<td>
 									{{ $apple->nom }}
 								</td>
@@ -69,6 +73,8 @@
 
     @endsection
 =======
+=======
+>>>>>>> origin/odile
 							</tr>
 							@endforeach
 						</tbody>
@@ -83,4 +89,7 @@
 
 @section('js')
 @endsection
+<<<<<<< HEAD
 >>>>>>> c0b6756a1e903331e64bf95f8e6d39e300294c8e
+=======
+>>>>>>> origin/odile

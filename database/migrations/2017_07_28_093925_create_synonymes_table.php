@@ -17,10 +17,14 @@ class CreateSynonymesTable extends Migration
             $table->increments('id');
             $table->integer('apple_id');
 <<<<<<< HEAD
+<<<<<<< HEAD
             $table->string('value')->nullable(); 
 =======
             $table->string('value')->nullable();
 >>>>>>> c0b6756a1e903331e64bf95f8e6d39e300294c8e
+=======
+            $table->string('value')->nullable();
+>>>>>>> origin/odile
             $table->timestamps();
         });
     }
@@ -31,6 +35,6 @@ class CreateSynonymesTable extends Migration
      */
     public function down()
     {
-       Schema::dropIfExists('synonymes');
-   }
+     Schema::dropIfExists('synonymes');
+ }
 }
