@@ -1,4 +1,4 @@
-@extends('layouts.welcome')
+@extends('layouts.app')
 @section('content')
 <div class="container">
 	<div class="row">
@@ -11,7 +11,7 @@
 								
 								<h2>Modifiez</h2></div>
 								{!! Form::open([
-									'route' => ['createApple']	
+									'url' => ['creation']
 									]) !!}
 									<div class="form-group">
 										<h3>Nom et synomymes</h3>

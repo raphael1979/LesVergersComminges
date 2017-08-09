@@ -14,19 +14,19 @@ class CreateSynonymesTable extends Migration
     public function up()
     {
         Schema::create('synonymes', function (Blueprint $table) {
-            $table->increments('id_synonyme');
-            $table->integer('id_apple');
-            $table->string('synomyme')->nullable();
+            $table->increments('id');
+            $table->integer('apple_id');
+            $table->string('value')->nullable();
             $table->timestamps();
         });
     }
-                /**
+    /**
      * Reverse the migrations.
      *
      * @return void
      */
-                public function down()
-                {
-                 Schema::dropIfExists('synonymes');
-             }
-         }
+    public function down()
+    {
+       Schema::dropIfExists('synonymes');
+   }
+}
