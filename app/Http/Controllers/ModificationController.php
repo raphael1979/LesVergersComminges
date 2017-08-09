@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Apple;
+use App\Synonyme;
 
 
 class ModificationController extends Controller
@@ -43,22 +44,19 @@ class ModificationController extends Controller
 		$apple->save();
 		Session::flash('flash_message', 'La variete a été ajoutée avec succès!');
 
+		// $synonymes = new \App\Synomyme;
+		// $synonymes = $request->input('synonyme');
 
-		$synonymes = $request->input('synonyme');
+		// $synonymes = explode('/',$synonymes);
 
+		// foreach ($synonymes as $synonyne) {
+
+		// 	$synonyme = new \App\Synonyme;
+		// 	$synonyme->nom = $synonyme;
+		// 	$synonyme->apple_id = $apple->id;
+		// }
 		return redirect('list');
 	}
-
-
-	$synonymes = explode('/',$synonymes);
-
-	foreach ($synonymes as $synonyne) {
-
-		$synonyme = new \App\Synonyme;
-		$synonyme->nom = $synonyme;
-		$synonyme->apple_id = $apple->id;
-	}
-
 
 	// enregistrement sur le storage des informations variétés
 	// public function store(Request $request)
@@ -116,7 +114,10 @@ class ModificationController extends Controller
   public function show($id)
   {
   	// $apple = Apple::findOrFail($id);
+  	
   	$apple = Apple::all()->where('id', '=', $id)->first();
+
+
 
   	return view('/showApple', compact('apple'));
   }
@@ -130,13 +131,15 @@ class ModificationController extends Controller
   * @return \Illuminate\Http\Response
   */
 
-  public function edit(Request $request)
+  public function edit($id)
   {
-  	$input = $request->all();
+    $apple=Apple::all()->where('id', '=', $id)->first();
 
-  	$apple->fill($input)->save();
+    // $input = $request->all();
 
-  	return view('edit', compact($apple));
+    $apple->fill($input)->save();
+
+    return view('edit', compact($apple));
   }
 
 

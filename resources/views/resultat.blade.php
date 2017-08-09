@@ -18,15 +18,20 @@
               <h4>Votre selection</h4>
               <tr>
                 <th>Nom</th>
-                <th>Vignette</th>
+                <th>Critères selectionnées</th>
                 
               </tr>
             </thead>
             <tbody>
-              @foreach ($apples as $apple)
+              @foreach ($result as $apple)
               <tr>
                 {{--  <a href="{{ route('description', $apple->id) }}"><i class="fa fa-info-circle" aria-hidden="true"></i></a> --}}
-                <td>{{$apple->nom}}</td>
+                <td><a style="color : red" href="show/{{ $apple['id'] }}">{{ $apple['nom'] }}</a></td>
+                <td>|
+                  @foreach( $apple['criteres'] as $critere)
+                  {{ $critere }} |
+                  @endforeach
+                </td>
                 
               </tr>
               @endforeach

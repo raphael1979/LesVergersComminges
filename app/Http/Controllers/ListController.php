@@ -21,7 +21,7 @@ class listController extends Controller
 
     	
 
-    	return view('adminlist', ['apples'=>$apples]);
+    	return view('list', ['apples'=>$apples]);
     }
     // public function getApples(Request $request)
     // {

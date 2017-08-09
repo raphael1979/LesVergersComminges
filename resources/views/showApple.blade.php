@@ -14,7 +14,7 @@
 							<b>Nom :</b>
 						</div>
 						<div class="col-md-5">
-						{{ $apple->nom }}
+							{{ $apple->nom }}
 						</div>
 					</div>
 
