@@ -48,57 +48,48 @@
                         </ul>
 
                         <!-- Right Side Of Navbar -->
-                        <ul class="nav navbar-nav navbar-right">
+                        <section class="nav navbar-nav navbar-right">
                             <!-- Authentication Links -->
                             @if (Auth::guest())
-                            <li><a href="{{ route('login') }}">Login</a></li>
+                            <a href="{{ route('login') }}" style="color:green">Login</a>
                             {{-- <li><a href="{{ route('register') }}">Register</a></li> --}}
                             @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
+                            <section>
+                                <a style="color:green" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                                Logout</a>
 
-                                <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                        document.getElementById('logout-form').submit();">
-                                        Logout
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        {{ csrf_field() }}
-                                    </form>
-                                </li>
-                            </ul>
-                        </li>
-                        @endif
-                    </ul>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                            </section>
+                            @endif
+                        </section>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </div>
-</header>
-
-@yield('content')
-
-<footer class="navbar-fixed-bottom">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-xs-4">2017 © Tous droits réservés.</div>
-            <div class="col-md-4 col-xs-4"> 
-                <a href="https://www.les-vergers-retrouves-du-comminges.org/contact/">Contact</a>|
-                <a href="https://www.les-vergers-retrouves-du-comminges.org/mentions-legales/">Mentions légales</a>|
-                <a href="https://www.les-vergers-retrouves-du-comminges.org/plan-du-site/ ">Plan du site</a>
-            </div>
-            <div class="col-md-4 col-xs-4">Les Vergers retrouvés du COMMINGES.</div>
+            </nav>
         </div>
-    </div>
-</footer>
+    </header>
 
-<!-- Scripts -->
-<script src="{{ asset('js/app.js') }}"></script>
-@yield('js')
+    @yield('content')
+
+    <footer class="navbar-fixed-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-xs-4">2017 © Tous droits réservés.</div>
+                <div class="col-md-4 col-xs-4"> 
+                    <a href="https://www.les-vergers-retrouves-du-comminges.org/contact/">Contact</a>|
+                    <a href="https://www.les-vergers-retrouves-du-comminges.org/mentions-legales/">Mentions légales</a>|
+                    <a href="https://www.les-vergers-retrouves-du-comminges.org/plan-du-site/ ">Plan du site</a>
+                </div>
+                <div class="col-md-4 col-xs-4">Les Vergers retrouvés du COMMINGES.</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
+    @yield('js')
 </body>
 </html>

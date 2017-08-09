@@ -7,6 +7,9 @@
 			<div class="panel panel-default">
 				<div class="panel-body">
 					<div class="container">
+						<div class="col-md-12 text-center">
+							<a href="/accueil" class="btn btn-">Retour à l'accueil</a>
+						</div>
 
 
 						<table class="table table-striped">

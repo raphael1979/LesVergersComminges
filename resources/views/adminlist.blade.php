@@ -10,6 +10,9 @@
 	{{ Session::get('flash_message') }}
 </div>
 @endif
+<div class="col-md-12 text-center">
+	<a href="/accueil" class="btn btn-">Retour à l'accueil</a>
+</div>
 <div class="container">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
