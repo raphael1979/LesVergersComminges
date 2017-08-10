@@ -1,3 +1,6 @@
 (function(){
-	console.log('coucouindex.js');
+	console.log('merde')
+	$('.retour').on('click',function(){
+		window.history.back();
+	});
 })()

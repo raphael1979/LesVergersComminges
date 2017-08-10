@@ -11,7 +11,8 @@
 </div>
 @endif
 <div class="col-md-12 text-center">
-	<a href="/accueil" class="btn btn-">Retour à l'accueil</a>
+	<a href="javascript:history.back()" class="btn"> Retour
+	</a>
 </div>
 <div class="container">
 	<div class="row">
